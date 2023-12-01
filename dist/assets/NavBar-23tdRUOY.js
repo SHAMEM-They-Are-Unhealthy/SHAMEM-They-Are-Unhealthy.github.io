@@ -30,4 +30,4 @@
             </nav>
         </header>
         <div style="height: 55px;"></div>
-        `}}customElements.define("nav-bar",l);document.addEventListener("DOMContentLoaded",function(){document.getElementsByTagName("head")[0].insertAdjacentHTML("afterbegin",'<link rel="stylesheet" href="/components/nav.css" />');const a=document.querySelector(".hamburger"),s=document.querySelector(".nav-menu"),r=document.querySelectorAll(".nav-link");a.addEventListener("click",n),r.forEach(t=>t.addEventListener("click",e));function n(){a.classList.toggle("active"),s.classList.toggle("active")}function e(){a.classList.remove("active"),s.classList.remove("active")}});
+        `}}customElements.define("nav-bar",l);document.addEventListener("DOMContentLoaded",function(){const a=document.querySelector(".hamburger"),s=document.querySelector(".nav-menu"),r=document.querySelectorAll(".nav-link");a.addEventListener("click",n),r.forEach(t=>t.addEventListener("click",e));function n(){a.classList.toggle("active"),s.classList.toggle("active")}function e(){a.classList.remove("active"),s.classList.remove("active")}});

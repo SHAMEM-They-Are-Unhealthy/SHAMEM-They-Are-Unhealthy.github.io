@@ -3,11 +3,28 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="/components/NavBar.js" type="text/javascript" defer></script>
-        <title>SHAMEM</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SHAMEM</title>
+      <script type="module" crossorigin src="/assets/NavBar-23tdRUOY.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/NavBar-whtKO-jZ.css">
+      <link rel="stylesheet" crossorigin href="/assets/health-KxYsmaYo.css">
     </head>
     <body>
         <nav-bar></nav-bar>
+        <main>
+            <h1 id="timeRemaining">10 years</h1>
+            <form action="">
+                <input type="range" id="vol" name="vol" min="0" max="150"><br/>
+                <input type="checkbox" id="exercise" name="exercise" value="exercise">
+                <label for="exercise">I exercise every day</label><br/>
+                <input type="checkbox" id="sports" name="sports" value="sports">
+                <label for="sports">I do other sports like running</label><br/>
+                <input type="checkbox" id="healthy" name="healthy" value="healthy">
+                <label for="healthy">I eat healthy</label><br/>
+                <input type="checkbox" id="fiveaday" name="fiveaday" value="fiveaday">
+                <label for="fiveaday">I eat my 5-a-day</label><br/><br/>
+                <input type="submit" value="Submit" class="card-button">
+            </form>
+        </main>
     </body>
 </html>

@@ -4,10 +4,65 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="/components/NavBar.js" type="text/javascript" defer></script>
+        <script src="/components/NavBar.js" type="module"></script>
+        <script src="range.js" type="module"></script>
+        <link rel="stylesheet" href="temp.css" />
+        <link rel="stylesheet" href="checkbox.css" />
         <title>SHAMEM</title>
     </head>
     <body>
         <nav-bar></nav-bar>
+        <main>
+            <form action="">
+                <h1 id="timeRemaining">10 years</h1>
+                <h1 id="currentAge">0 years old</h1>
+                <div class="rangeDiv">
+                    <input type="range" min="0" max="150" value="0" id="range" /> 
+                </div>
+                <div class="column">
+                    <div class="padding">
+                        <label for="exercise" class="container">I exercise every day
+                            <input type="checkbox" id="exercise" name="exercise" value="exercise">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="sports" class="container">I do other sports like running
+                            <input type="checkbox" id="sports" name="sports" value="sports">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="healthy" class="container">I eat healthy
+                            <input type="checkbox" id="healthy" name="healthy" value="healthy">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="fiveaday" class="container">I eat my 5-a-day
+                            <input type="checkbox" id="fiveaday" name="fiveaday" value="fiveaday">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="padding">
+                        <label for="exercise" class="container">I exercise every day
+                            <input type="checkbox" id="exercise" name="exercise" value="exercise">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="sports" class="container">I do other sports like running
+                            <input type="checkbox" id="sports" name="sports" value="sports">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="healthy" class="container">I eat healthy
+                            <input type="checkbox" id="healthy" name="healthy" value="healthy">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="fiveaday" class="container">I eat my 5-a-day
+                            <input type="checkbox" id="fiveaday" name="fiveaday" value="fiveaday">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div style="text-align: center">
+                    <input type="submit" value="Submit" class="card-button">
+                </div>
+            </form>
+        </main>
     </body>
 </html>
