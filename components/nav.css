@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat,wght@0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('http://fonts.googleapis.com/css?family=Roboto');
 
 * {
     margin: 0;
@@ -31,6 +32,7 @@
 html {
     font-size: 62.5%;
     font-family: 'Montserrat', sans-serif;
+    color: var(--on-background);
 }
 
 body {
@@ -45,8 +47,24 @@ a {
     text-decoration: none;
 }
 
-.header{
+img {
+    vertical-align: middle;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+.header {
     background-color: var(--surface);
+    box-shadow:
+        0px 1px 1px 0px hsla(0,0%,0%,0.14), 
+        0px 2px 1px -1px hsla(0,0%,0%,0.12), 
+        0px 1px 3px 0px hsla(0,0%,0%,0.2);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
 }
 
 .navbar {
@@ -74,6 +92,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10000;
 }
 
 .nav-item {
@@ -83,32 +102,32 @@ a {
 .nav-link{
     font-size: 1.6rem;
     font-weight: 400;
-    color: #475569;
+    color: var(--primary);
 }
 
 .nav-link:hover{
-    color: #482ff7;
+    color: var(--primary-variant);
 }
 
 .nav-logo {
     font-size: 2.1rem;
-    font-weight: 500;
-    color: #482ff7;
+    font-weight: 900;
+    color: var(--secondary);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 780px) {
     .nav-menu {
         position: fixed;
         left: -100%;
         top: 5rem;
         flex-direction: column;
-        background-color: #fff;
+        background-color: var(--surface);
         width: 100%;
         border-radius: 10px;
         text-align: center;
         transition: 0.3s;
-        box-shadow:
-            0 10px 27px rgba(0, 0, 0, 0.05);
+        border: 1px solid var(--on-background);
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     }
 
     .nav-menu.active {
