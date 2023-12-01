@@ -13,19 +13,19 @@ class NavBar extends HTMLElement {
                     <a href="/" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/diet.html" class="nav-link">Diet</a>
+                    <a href="/diet/" class="nav-link">Diet</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/contact.html" class="nav-link">Contact</a>
+                    <a href="/contact/" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/workout.html" class="nav-link">Workout</a>
+                    <a href="/workout/" class="nav-link">Workout</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/health.html" class="nav-link">Health</a>
+                    <a href="/health/" class="nav-link">Health</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/benefits.html" class="nav-link">Benefits</a>
+                    <a href="/benefits/" class="nav-link">Benefits</a>
                 </li>
             </ul>
             <div class="hamburger">
@@ -44,7 +44,7 @@ class NavBar extends HTMLElement {
 customElements.define('nav-bar', NavBar);
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementsByTagName('head')[0].insertAdjacentHTML('afterbegin', '<link rel="stylesheet" href="components/nav.css" />');
+    document.getElementsByTagName('head')[0].insertAdjacentHTML('afterbegin', '<link rel="stylesheet" href="/components/nav.css" />');
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-menu");
     const navLink = document.querySelectorAll(".nav-link");
