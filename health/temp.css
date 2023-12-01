@@ -22,13 +22,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-button {
     background-color: var(--primary);
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'Roboto', sans-serif;
     color: var(--on-primary);
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    padding: 10px 25px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    margin-bottom: 15px;
+    padding: 8px 20px;
     border: none;
     border-radius: 10px;
 }
@@ -41,4 +41,20 @@ h1, h2, h3, h4, h5, h6 {
 .card-button:active {
     background-color: var(--primary-variant);
     color: var(--on-primary-variant);
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.padding {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 780px) {
+    .column {
+        width: 100%;
+    }
 }
