@@ -44,7 +44,7 @@ class NavBar extends HTMLElement {
 customElements.define('nav-bar', NavBar);
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementsByTagName('head')[0].insertAdjacentHTML('beforeend', '<link rel="stylesheet" href="components/nav.css" />');
+    document.getElementsByTagName('head')[0].insertAdjacentHTML('afterbegin', '<link rel="stylesheet" href="components/nav.css" />');
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-menu");
     const navLink = document.querySelectorAll(".nav-link");
