@@ -9,7 +9,7 @@ class NavBar extends HTMLElement {
         this.innerHTML = `
         <header class="header">
             <nav class="navbar">
-            <a href="/" class="nav-logo"><img src="/components/SRF.png" style="width: 100px; height:auto;"/></a>
+            <a href="/" class="nav-logo"><img id="logo-img" style="width: 100px; height:auto;"/></a>
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="/" class="nav-link">Home</a>
