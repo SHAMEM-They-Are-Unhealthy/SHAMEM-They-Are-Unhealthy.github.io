@@ -22,12 +22,7 @@
                 <div class="column">
                     <div class="padding">
                         <label class="container">Outdoors for 15 mins a day (0.4-4.2 years)<!--https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3395188/-->
-                            <input type="checkbox" id="exercise">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container">I do other sports like running (0.4-6.9 years)<!--https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3395188/-->
-                            <input type="checkbox" id="sports">
-                            <span class="checkmark"></span>
+                            <input type="number" id="exercise" min="0" max="7" step="1" value="2" size="1">
                         </label>
                         <label class="container">No opioid addition (4 years)<!--https://www.cnbc.com/2023/08/03/8-habits-that-may-add-20-years-to-your-life-according-to-a-new-study.html-->
                             <input type="checkbox" id="opioid">
@@ -42,20 +37,17 @@
                 <div class="column">
                     <div class="padding">
                         <label class="container">Not drinking
-                            <input type="checkbox" id="drinking">
-                            <span class="checkmark"></span>
+                            <input type="number" id="drinking" min="0" max="8" step="1" value="0" size="1">
                         </label>
-                        <label class="container">Sleeping at least 8 hours
+                        <label class="container">Sleeping at least 8 hours (2.5-4.7)<!--https://www.acc.org/About-ACC/Press-Releases/2023/02/22/21/35/Getting-Good-Sleep-Could-Add-Years-to-Your-Life#:~:text=Among%20men%20and%20women%20who,elements%20of%20low%2Drisk%20sleep.-->
                             <input type="checkbox" id="sleeping">
                             <span class="checkmark"></span>
                         </label>
-                        <label class="container">I eat healthy
-                            <input type="checkbox" id="healthy">
-                            <span class="checkmark"></span>
+                        <label class="container">Weight (BMI)
+                            <input type="number" id="weight" min="34" max="180" step="5" value="68" size="3">
                         </label>
-                        <label class="container">I eat my 5-a-day
-                            <input type="checkbox" id="fiveaday">
-                            <span class="checkmark"></span>
+                        <label class="container">Height
+                            <input type="number" id="height" min="140" max="210" step="10" value="170" size="3">
                         </label>
                     </div>
                 </div>

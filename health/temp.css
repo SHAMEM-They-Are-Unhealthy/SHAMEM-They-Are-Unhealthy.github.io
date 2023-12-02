@@ -1,21 +1,5 @@
 @import url('http://fonts.googleapis.com/css?family=Roboto');
 
-:root {
-	--background: #121212;
-	--surface: #1E1E1E;
-	--primary: #BB86FC;
-	--primary-variant: #3700B3;
-	--secondary: #03DAC6;
-	--on-background: #FFFFFF;
-	--on-surface: #FFFFFF;
-    --on-surface-secondary: #979797;
-	--on-primary: #000000;
-    --on-primary-variant: #FFFFFF;
-	--on-secondary: #000000;
-	--error: #CF6679;
-	--on-error: #000000;
-}
-
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
