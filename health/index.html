@@ -3,28 +3,55 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>SHAMEM</title>
-      <script type="module" crossorigin src="/assets/NavBar-23tdRUOY.js"></script>
-      <link rel="stylesheet" crossorigin href="/assets/NavBar-whtKO-jZ.css">
-      <link rel="stylesheet" crossorigin href="/assets/health-KxYsmaYo.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SHAMEM</title>
+      <script type="module" crossorigin src="/assets/health-ozVB0KGc.js"></script>
+      <link rel="modulepreload" crossorigin href="/assets/NavBar-pll_SPqi.js">
+      <link rel="stylesheet" crossorigin href="/assets/NavBar-HUVzbXqr.css">
+      <link rel="stylesheet" crossorigin href="/assets/health-GfEvuSMx.css">
     </head>
     <body>
         <nav-bar></nav-bar>
         <main>
-            <h1 id="timeRemaining">10 years</h1>
-            <form action="">
-                <input type="range" id="vol" name="vol" min="0" max="150"><br/>
-                <input type="checkbox" id="exercise" name="exercise" value="exercise">
-                <label for="exercise">I exercise every day</label><br/>
-                <input type="checkbox" id="sports" name="sports" value="sports">
-                <label for="sports">I do other sports like running</label><br/>
-                <input type="checkbox" id="healthy" name="healthy" value="healthy">
-                <label for="healthy">I eat healthy</label><br/>
-                <input type="checkbox" id="fiveaday" name="fiveaday" value="fiveaday">
-                <label for="fiveaday">I eat my 5-a-day</label><br/><br/>
-                <input type="submit" value="Submit" class="card-button">
-            </form>
+            <section>
+                <h1 id="timeRemaining">10 years</h1>
+                <h1 id="currentAge">0 years old</h1>
+                <div class="rangeDiv">
+                    <input type="range" min="0" max="150" value="0" id="range" /> 
+                </div>
+                <div class="column">
+                    <div class="padding">
+                        <label class="container">Outdoors for 15 mins a day (0.4-4.2 years)<!--https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3395188/-->
+                            <input type="number" id="exercise" min="0" max="7" step="1" value="2" size="1">
+                        </label>
+                        <label class="container">No opioid addition (4 years)<!--https://www.cnbc.com/2023/08/03/8-habits-that-may-add-20-years-to-your-life-according-to-a-new-study.html-->
+                            <input type="checkbox" id="opioid">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">No smoking (10 years)<!--https://www.bupa.co.uk/health-information/lungs-breathing/effects-of-smoking-->
+                            <input type="checkbox" id="smoking">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="padding">
+                        <label class="container">Not drinking
+                            <input type="number" id="drinking" min="0" max="8" step="1" value="0" size="1">
+                        </label>
+                        <label class="container">Sleeping at least 8 hours (2.5-4.7)<!--https://www.acc.org/About-ACC/Press-Releases/2023/02/22/21/35/Getting-Good-Sleep-Could-Add-Years-to-Your-Life#:~:text=Among%20men%20and%20women%20who,elements%20of%20low%2Drisk%20sleep.-->
+                            <input type="checkbox" id="sleeping">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Weight (BMI)
+                            <input type="number" id="weight" min="34" max="180" step="5" value="68" size="3">
+                        </label>
+                        <label class="container">Height
+                            <input type="number" id="height" min="140" max="210" step="10" value="170" size="3">
+                        </label>
+                    </div>
+                </div>
+            </section>
         </main>
     </body>
 </html>
