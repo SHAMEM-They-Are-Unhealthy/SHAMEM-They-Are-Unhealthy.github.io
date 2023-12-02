@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: any) {
     :root {
         --background: #FFFFFF;
         --surface: #EEEEEE;
@@ -25,9 +25,22 @@
     }
 }
 
-@media (prefers-color-scheme: light) { /*Change light to dark to enable dark mode*/
+@media (prefers-color-scheme: dark) {/*Flip commented area to enable dark mode*/
     :root {
-        --background: #121212;
+        --background: #FFFFFF;
+        --surface: #EEEEEE;
+        --primary: #3700B3;
+        --primary-variant: #BB86FC;
+        --secondary: #03DAC6;
+        --on-background: #121212;
+        --on-surface: #121212;
+        --on-surface-secondary: #979797;
+        --on-primary: #FFFFFF;
+        --on-primary-variant: #000000;
+        --on-secondary: #FFFFFF;
+        --error: #CF6679;
+        --on-error: #000000;
+        /*--background: #121212;
         --surface: #121212;
         --primary: #BB86FC;
         --primary-variant: #3700B3;
@@ -39,7 +52,7 @@
         --on-primary-variant: #FFFFFF;
         --on-secondary: #000000;
         --error: #CF6679;
-        --on-error: #000000;
+        --on-error: #000000;*/
     }
 }
 
