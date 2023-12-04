@@ -5,7 +5,7 @@
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="/components/NavBar.js" type="module"></script>
-        <script src="range.js" type="module"></script>
+        <script src="/components/range.js" type="module"></script>
         <link rel="stylesheet" href="temp.css" />
         <link rel="stylesheet" href="checkbox.css" />
         <title>SHAMEM</title>
@@ -14,13 +14,12 @@
         <nav-bar></nav-bar>
         <main>
             <section>
-                <h1 id="timeRemaining">10 years</h1>
-                <h1 id="currentAge">0 years old</h1>
-                <div class="rangeDiv">
-                    <input type="range" min="0" max="150" value="0" id="range" /> 
-                </div>
                 <div class="column">
                     <div class="padding">
+                        <label class="container">Weight (BMI)</label>
+                        <range-bar number="y" id="weight" other-id="" min="34" max="180" value="68" prefix="" suffix="kgs"></range-bar>
+                        <label class="container">Height</label>
+                        <range-bar number="y" id="height" other-id="" min="140" max="210" value="170" prefix="" suffix="cm"></range-bar>
                         <label style="font-size: 22px;">Outdoors for 15 mins a day (0.4-4.2 years)<!--https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3395188/-->
                             <input type="number" id="exercise" min="0" max="7" step="1" value="2" size="1">
                         </label>
@@ -38,12 +37,6 @@
                         <label class="container">Sleeping at least 8 hours (2.5-4.7)<!--https://www.acc.org/About-ACC/Press-Releases/2023/02/22/21/35/Getting-Good-Sleep-Could-Add-Years-to-Your-Life#:~:text=Among%20men%20and%20women%20who,elements%20of%20low%2Drisk%20sleep.-->
                             <input type="checkbox" id="sleeping">
                             <span class="checkmark"></span>
-                        </label>
-                        <label class="container">Weight (BMI)
-                            <input type="number" id="weight" min="34" max="180" step="5" value="68" size="3">
-                        </label>
-                        <label class="container">Height
-                            <input type="number" id="height" min="140" max="210" step="10" value="170" size="3">
                         </label>
                     </div>
                 </div>

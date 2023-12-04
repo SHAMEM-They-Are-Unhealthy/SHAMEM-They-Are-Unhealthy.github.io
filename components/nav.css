@@ -7,7 +7,8 @@
     box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: any) {
+/*Remove commented area to enable dark mode*/
+/*@media (prefers-color-scheme: any) {
     :root {
         --background: #ffffff;
         --surface: #eeeeee;
@@ -26,22 +27,8 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    /*Flip commented area to enable dark mode*/
     :root {
-        --background: #FFFFFF;
-        --surface: #EEEEEE;
-        --primary: #3700B3;
-        --primary-variant: #BB86FC;
-        --secondary: #03DAC6;
-        --on-background: #121212;
-        --on-surface: #121212;
-        --on-surface-secondary: #979797;
-        --on-primary: #FFFFFF;
-        --on-primary-variant: #000000;
-        --on-secondary: #FFFFFF;
-        --error: #CF6679;
-        --on-error: #000000;
-        /*--background: #121212;
+        --background: #121212;
         --surface: #121212;
         --primary: #bb86fc;
         --primary-variant: #3700b3;
@@ -53,8 +40,24 @@
         --on-primary-variant: #ffffff;
         --on-secondary: #000000;
         --error: #cf6679;
-        --on-error: #000000;*/
+        --on-error: #000000;
     }
+}*/
+
+:root {
+    --background: #ffffff;
+    --surface: #eeeeee;
+    --primary: #3700b3;
+    --primary-variant: #bb86fc;
+    --secondary: #03dac6;
+    --on-background: #121212;
+    --on-surface: #121212;
+    --on-surface-secondary: #979797;
+    --on-primary: #ffffff;
+    --on-primary-variant: #000000;
+    --on-secondary: #ffffff;
+    --error: #cf6679;
+    --on-error: #000000;
 }
 
 .dp01 {
