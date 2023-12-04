@@ -5,9 +5,10 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SHAMEM</title>
-    <script type="module" crossorigin src="/assets/NavBar-FCUqYbo2.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/NavBar-3eIQiS3Q.css">
-    <link rel="stylesheet" crossorigin href="/assets/contact-lYrjS2oD.css">
+    <script type="module" crossorigin src="/assets/contact-WjfRe-Ns.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/NavBar-y7bR-y7T.js">
+    <link rel="stylesheet" crossorigin href="/assets/NavBar-Qq1fqyx6.css">
+    <link rel="stylesheet" crossorigin href="/assets/contact-njajY4wS.css">
   </head>
   <body>
     <nav-bar></nav-bar>
@@ -19,12 +20,13 @@
           architecto harum sunt quasi esse dolores dolor delectus tempore.
         </p>
       </div>
-      <p class="alert"></p>
       <form class="contact-form">
         <div class="container">
           <div class="input-column">
             <div class="fname field">
-              <label for="fname">First Name</label>
+              <label for="fname"
+                >First Name<span style="color: red">*</span></label
+              >
               <input type="text" id="fname" />
             </div>
             <div class="lname field">
@@ -32,13 +34,15 @@
               <input type="text" id="lname" />
             </div>
             <div class="email field">
-              <label for="email">Email</label>
+              <label for="email">Email<span style="color: red">*</span></label>
               <input type="email" id="email" />
             </div>
             <div class="subject-form field">
-              <label for="subject">Subject</label>
+              <label for="subject"
+                >Subject<span style="color: red">*</span></label
+              >
               <select name="" id="subject">
-                <option value="placeholder">Select Subject</option>
+                <option value="">Select Subject</option>
                 <option value="Diet">Diet</option>
                 <option value="Fitness">Fitness</option>
                 <option value="Health">Health</option>
@@ -48,19 +52,22 @@
             </div>
           </div>
           <div class="input-column">
-            <div class="enquirey-form field">
-              <label for="enquirey">Enquirey</label>
+            <div class="enquiry-form field">
+              <label for="enquiry"
+                >Enquiry<span style="color: red">*</span></label
+              >
               <textarea
                 rows="5"
                 cols="33"
-                id="enquirey"
+                id="enquiry"
                 placeholder="How can we help you?"
               ></textarea>
             </div>
           </div>
         </div>
         <div class="form-control">
-          <button type="submit" class="btn">Submit</button>
+          <p class="alert"></p>
+          <button type="submit" class="submit-btn">Submit</button>
         </div>
       </form>
     </div>
