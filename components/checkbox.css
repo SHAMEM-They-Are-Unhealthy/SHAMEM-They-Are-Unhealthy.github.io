@@ -9,6 +9,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    text-align: left;
 }
   
 .container input {
@@ -27,6 +28,7 @@
     width: 26px;
     background-color: #eee;
     border-radius: 5px;
+    border: 1px solid;
 }
   
 .container:hover input ~ .checkmark {

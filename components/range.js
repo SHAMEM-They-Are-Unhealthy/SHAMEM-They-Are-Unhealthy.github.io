@@ -2,7 +2,7 @@ import "./range.css"
 
 class Range extends HTMLElement {
     static get observedAttributes() {
-        return ["number", "id", "other-id", "min", "max", "value", "prefix", "suffix"];
+        return ["number", "vid", "other-id", "min", "max", "value", "prefix", "suffix"];
     }
 
     constructor() {
@@ -10,60 +10,25 @@ class Range extends HTMLElement {
     }
 
     connectedCallback() {
-        if (this.number != "") {
+        if (this.getAttribute("number") != "") {
             this.innerHTML = `
             <div class="rangeDiv">
-                <input type="range" class="range" min="${this.getAttribute("min")}" max="${this.getAttribute("max")}" value="${this.getAttribute("value")}" id="${this.getAttribute("id")}" /> 
+                <input type="range" class="range" other-id="${this.getAttribute("vid")}-text" min="${this.getAttribute("min")}" max="${this.getAttribute("max")}" value="${this.getAttribute("value")}" id="${this.getAttribute("vid")}" prefix="${this.getAttribute("prefix")}" suffix="${this.getAttribute("suffix")}" style="background: linear-gradient(to right, #f50 ${((this.getAttribute("value") - this.getAttribute("min")) / (this.getAttribute("max") - this.getAttribute("min"))) * 100}%, #ccc ${((this.getAttribute("value") - this.getAttribute("min")) / (this.getAttribute("max") - this.getAttribute("min"))) * 100}%)" />
+                <label id="${this.getAttribute("vid")}-text" style="padding-left: 20px; padding-right: 20px;">${this.getAttribute("prefix") + this.getAttribute("value") + this.getAttribute("suffix")}</label> 
             </div>
-            <h1 id="${this.getAttribute("id")}-text">${this.getAttribute("value")}</h1>
-            <script>
-            console.log("a");
-            const slider = document.querySelector("#${this.getAttribute("id")}")
-            const sliderValue = document.querySelector("#${this.getAttribute("id")}-text")
-            
-            slider.addEventListener("input", (event) => {
-                const tempSliderValue = Number(event.target.value); 
-                sliderValue.textContent = "${this.getAttribute("prefix")}" + tempSliderValue + "${this.getAttribute("suffix")}"; 
-                const progress = (tempSliderValue / slider.max) * 100;
-                slider.style.background = \`linear-gradient(to right, #f50 \${progress}%, #ccc \${progress}%)\`;
-                slider.style.setProperty("--thumb-rotate", \`\${(tempSliderValue/100) * 2160}deg\`)
-            })
-            </script>
             `;
         } else {
-            if (this.otherId != "") {
+            if (this.getAttribute("other-id") != "") {
                 this.innerHTML = `
                 <div class="rangeDiv">
-                    <input type="range" class="range" min="${this.getAttribute("min")}" max="${this.getAttribute("max")}" value="${this.getAttribute("value")}" id="${this.getAttribute("id")}" /> 
+                    <input type="range" class="range" other-id="${this.getAttribute("other-id")}" min="${this.getAttribute("min")}" max="${this.getAttribute("max")}" value="${this.getAttribute("value")}" id="${this.getAttribute("vid")}" prefix="${this.getAttribute("prefix")}" suffix="${this.getAttribute("suffix")}" style="background: linear-gradient(to right, #f50 ${((this.getAttribute("value") - this.getAttribute("min")) / (this.getAttribute("max") - this.getAttribute("min"))) * 100}%, #ccc ${((this.getAttribute("value") - this.getAttribute("min")) / (this.getAttribute("max") - this.getAttribute("min"))) * 100}%)" /> 
                 </div>
-                <script>
-                const slider = document.querySelector("#${this.getAttribute("id")}")
-                const sliderValue = document.querySelector("#${this.getAttribute("otherId")}")
-                
-                slider.addEventListener("input", (event) => {
-                    const tempSliderValue = Number(event.target.value); 
-                    sliderValue.textContent = "${this.getAttribute("prefix")}" + tempSliderValue + "${this.getAttribute("suffix")}"; 
-                    const progress = (tempSliderValue / slider.max) * 100;
-                    slider.style.background = \`linear-gradient(to right, #f50 \${progress}%, #ccc \${progress}%)\`;
-                    slider.style.setProperty("--thumb-rotate", \`\${(tempSliderValue/100) * 2160}deg\`)
-                })
-                </script>
                 `;
             } else {
                 this.innerHTML = `
                 <div class="rangeDiv">
-                    <input type="range" class="range" min="${this.getAttribute("min")}" max="${this.getAttribute("max")}" value="${this.getAttribute("value")}" id="${this.getAttribute("id")}" /> 
+                    <input type="range" class="range" other-id="" min="${this.getAttribute("min")}" max="${this.getAttribute("max")}" value="${this.getAttribute("value")}" id="${this.getAttribute("vid")}" prefix="${this.getAttribute("prefix")}" suffix="${this.getAttribute("suffix")}" style="background: linear-gradient(to right, #f50 ${((this.getAttribute("value") - this.getAttribute("min")) / (this.getAttribute("max") - this.getAttribute("min"))) * 100}%, #ccc ${((this.getAttribute("value") - this.getAttribute("min")) / (this.getAttribute("max") - this.getAttribute("min"))) * 100}%)" /> 
                 </div>
-                <script>
-                const slider = document.querySelector("#${this.getAttribute("id")}")
-                
-                slider.addEventListener("input", (event) => {
-                    const tempSliderValue = Number(event.target.value); 
-                    const progress = (tempSliderValue / slider.max) * 100;
-                    slider.style.background = \`linear-gradient(to right, #f50 \${progress}%, #ccc \${progress}%)\`;
-                    slider.style.setProperty("--thumb-rotate", \`\${(tempSliderValue/100) * 2160}deg\`)
-                })
-                </script>
                 `;
             }
         }
@@ -71,3 +36,21 @@ class Range extends HTMLElement {
 }
 
 customElements.define('range-bar', Range);
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sliders = document.getElementsByClassName("rangeDiv");
+    for (let i = 0; i < sliders.length; i++) {
+        const slider = sliders[i].children[0];
+        const sliderValueExists = slider.getAttribute("other-id") != "";
+
+        slider.addEventListener("input", (event) => {
+            const tempSliderValue = Number(event.target.value);
+            if (sliderValueExists) {
+                document.querySelector("#"+slider.getAttribute("other-id")).textContent = slider.getAttribute("prefix") + tempSliderValue + slider.getAttribute("suffix");
+            } 
+            const progress = ((tempSliderValue - slider.min) / (slider.max - slider.min)) * 100;
+            slider.style.background = `linear-gradient(to right, #f50 ${progress}%, #ccc ${progress}%)`;
+            slider.style.setProperty("--thumb-rotate", `${(tempSliderValue/100) * 2160}deg`)
+        })
+    }
+});
