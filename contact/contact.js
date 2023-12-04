@@ -10,7 +10,6 @@ submit.addEventListener("click", (e) => {
   let inputChecker = true;
   e.preventDefault();
   checkEmpty(fname);
-  checkEmpty(lname);
   checkEmpty(email);
   checkEmpty(subject);
   checkEmpty(enquirey);
@@ -22,6 +21,11 @@ submit.addEventListener("click", (e) => {
   }
   if (inputChecker) {
     displayAlert("Enquirey Submitted", "green");
+    clearInputs(fname);
+    clearInputs(lname);
+    clearInputs(email);
+    clearInputs(enquirey);
+    subject.selectedIndex = subject.options[0];
   }
 
   function displayAlert(text, style) {
@@ -31,6 +35,10 @@ submit.addEventListener("click", (e) => {
     setTimeout(() => {
       alert.textContent = "";
       alert.classList.remove(`alert-${style}`);
-    }, 2000);
+    }, 3000);
+  }
+
+  function clearInputs(input) {
+    input.value = "";
   }
 });

@@ -28,9 +28,11 @@ h2 {
 select,
 input,
 textarea {
+  font-size: 1.6rem;
   border-width: medium;
   border-color: black;
   border-radius: 6px;
+  padding: 5px;
 }
 
 label {
@@ -40,16 +42,10 @@ label {
 
 select {
   width: 100%;
-  padding: 5px;
-}
-
-input {
-  font-size: 1.6rem;
-  padding: 5px;
 }
 
 textarea {
-  padding: 5px;
+  font-size: 1.3rem;
   height: 20rem;
 }
 
