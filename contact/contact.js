@@ -2,7 +2,7 @@ const fname = document.querySelector("#fname");
 const lname = document.querySelector("#lname");
 const email = document.querySelector("#email");
 const subject = document.querySelector("#subject");
-const enquirey = document.querySelector("#enquirey");
+const enquiry = document.querySelector("#enquiry");
 const submit = document.querySelector(".submit-btn");
 const alert = document.querySelector(".alert");
 
@@ -12,7 +12,7 @@ submit.addEventListener("click", (e) => {
   checkEmpty(fname);
   checkEmpty(email);
   checkEmpty(subject);
-  checkEmpty(enquirey);
+  checkEmpty(enquiry);
   function checkEmpty(input) {
     if (!input.value) {
       displayAlert("Input field empty", "red");
@@ -20,11 +20,11 @@ submit.addEventListener("click", (e) => {
     }
   }
   if (inputChecker) {
-    displayAlert("Enquirey Submitted", "green");
+    displayAlert("Enquiry Submitted", "green");
     clearInputs(fname);
     clearInputs(lname);
     clearInputs(email);
-    clearInputs(enquirey);
+    clearInputs(enquiry);
     subject.selectedIndex = subject.options[0];
   }
 
