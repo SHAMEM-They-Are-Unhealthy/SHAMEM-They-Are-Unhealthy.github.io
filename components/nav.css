@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('http://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("http://fonts.googleapis.com/css?family=Roboto");
 
 * {
     margin: 0;
@@ -7,71 +7,73 @@
     box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: any) {
+/*Remove commented area to enable dark mode*/
+/*@media (prefers-color-scheme: any) {
     :root {
-        --background: #FFFFFF;
-        --surface: #EEEEEE;
-        --primary: #3700B3;
-        --primary-variant: #BB86FC;
-        --secondary: #03DAC6;
+        --background: #ffffff;
+        --surface: #eeeeee;
+        --primary: #3700b3;
+        --primary-variant: #bb86fc;
+        --secondary: #03dac6;
         --on-background: #121212;
         --on-surface: #121212;
         --on-surface-secondary: #979797;
-        --on-primary: #FFFFFF;
+        --on-primary: #ffffff;
         --on-primary-variant: #000000;
-        --on-secondary: #FFFFFF;
-        --error: #CF6679;
+        --on-secondary: #ffffff;
+        --error: #cf6679;
         --on-error: #000000;
     }
 }
 
-@media (prefers-color-scheme: dark) {/*Flip commented area to enable dark mode*/
+@media (prefers-color-scheme: dark) {
     :root {
-        --background: #FFFFFF;
-        --surface: #EEEEEE;
-        --primary: #3700B3;
-        --primary-variant: #BB86FC;
-        --secondary: #03DAC6;
-        --on-background: #121212;
-        --on-surface: #121212;
-        --on-surface-secondary: #979797;
-        --on-primary: #FFFFFF;
-        --on-primary-variant: #000000;
-        --on-secondary: #FFFFFF;
-        --error: #CF6679;
-        --on-error: #000000;
-        /*--background: #121212;
+        --background: #121212;
         --surface: #121212;
-        --primary: #BB86FC;
-        --primary-variant: #3700B3;
-        --secondary: #03DAC6;
-        --on-background: #FFFFFF;
-        --on-surface: #FFFFFF;
+        --primary: #bb86fc;
+        --primary-variant: #3700b3;
+        --secondary: #03dac6;
+        --on-background: #ffffff;
+        --on-surface: #ffffff;
         --on-surface-secondary: #979797;
         --on-primary: #000000;
-        --on-primary-variant: #FFFFFF;
+        --on-primary-variant: #ffffff;
         --on-secondary: #000000;
-        --error: #CF6679;
-        --on-error: #000000;*/
+        --error: #cf6679;
+        --on-error: #000000;
     }
+}*/
+
+:root {
+    --background: #ffffff;
+    --surface: #eeeeee;
+    --primary: #3700b3;
+    --primary-variant: #bb86fc;
+    --secondary: #03dac6;
+    --on-background: #121212;
+    --on-surface: #121212;
+    --on-surface-secondary: #979797;
+    --on-primary: #ffffff;
+    --on-primary-variant: #000000;
+    --on-secondary: #ffffff;
+    --error: #cf6679;
+    --on-error: #000000;
 }
 
 .dp01 {
     background-color: hsla(0, 100%, 100%, 0.05);
-    box-shadow:
-        0px 1px 1px 0px hsla(0,0%,0%,0.14), 
-        0px 2px 1px -1px hsla(0,0%,0%,0.12), 
-        0px 1px 3px 0px hsla(0,0%,0%,0.2);
+    box-shadow: 0px 1px 1px 0px hsla(0, 0%, 0%, 0.14),
+        0px 2px 1px -1px hsla(0, 0%, 0%, 0.12), 0px 1px 3px 0px hsla(0, 0%, 0%, 0.2);
 }
 
 html {
     font-size: 62.5%;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: var(--on-background);
 }
 
 body {
-	background-color: var(--background);
+    background-color: var(--background);
 }
 
 li {
@@ -92,10 +94,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .header {
     background-color: var(--surface);
-    box-shadow:
-        0px 1px 1px 0px hsla(0,0%,0%,0.14), 
-        0px 2px 1px -1px hsla(0,0%,0%,0.12), 
-        0px 1px 3px 0px hsla(0,0%,0%,0.2);
+    box-shadow: 0px 1px 1px 0px hsla(0, 0%, 0%, 0.14),
+        0px 2px 1px -1px hsla(0, 0%, 0%, 0.12), 0px 1px 3px 0px hsla(0, 0%, 0%, 0.2);
     position: fixed;
     top: 0px;
     width: 100%;
@@ -107,6 +107,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
+    background-color: var(--background);
 }
 
 .hamburger {
@@ -120,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: #FFFFFF;
+    background-color: var(--on-background);
 }
 
 .nav-menu {
@@ -134,13 +135,13 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 5rem;
 }
 
-.nav-link{
+.nav-link {
     font-size: 1.6rem;
     font-weight: 400;
     color: var(--primary);
 }
 
-.nav-link:hover{
+.nav-link:hover {
     color: var(--primary-variant);
 }
 

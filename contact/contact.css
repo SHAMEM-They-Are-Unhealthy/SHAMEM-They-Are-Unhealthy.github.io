@@ -1,5 +1,5 @@
 h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   padding-bottom: 3rem;
 }
 
@@ -14,32 +14,38 @@ h2 {
 }
 
 .heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-bottom: 3rem;
 }
 
-p {
+.container {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+}
+
+select,
+input,
+textarea {
+  font-size: 1.6rem;
+  border-width: medium;
+  border-color: black;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+label {
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
 }
 
 select {
   width: 100%;
-  padding: 5px;
-}
-
-input {
-  font-size: 1.6rem;
-  border-radius: 6px;
-  padding: 5px;
-}
-
-::placeholder {
-  color: black;
 }
 
 textarea {
-  border-radius: 6px;
-  padding: 5px;
+  font-size: 1.3rem;
   height: 20rem;
 }
 
@@ -52,31 +58,40 @@ textarea {
 
 .form-control {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.btn {
+.submit-btn {
   background-color: azure;
   color: black;
   padding: 0.6rem 1rem;
   border-radius: 8px;
+  margin: auto;
 }
 
-.btn:hover {
+.submit-btn:hover {
   background-color: black;
   cursor: pointer;
   color: white;
 }
 
-label {
-  font-size: 2.5rem;
-  padding-bottom: 1rem;
+.alert {
+  margin-bottom: 1rem;
+  height: auto;
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 6px;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 1rem;
+.alert-red {
+  color: #721c24;
+  background: #f8d7da;
+}
+
+.alert-green {
+  color: #155724;
+  background: #d4edda;
 }
 
 @media all and (min-width: 781px) {
@@ -84,7 +99,6 @@ label {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    padding-bottom: 3rem;
   }
   .input-column {
     width: 32%;

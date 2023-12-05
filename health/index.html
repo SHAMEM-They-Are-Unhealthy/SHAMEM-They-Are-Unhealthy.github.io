@@ -5,53 +5,145 @@
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="/components/NavBar.js" type="module"></script>
-        <script src="range.js" type="module"></script>
-        <link rel="stylesheet" href="temp.css" />
-        <link rel="stylesheet" href="checkbox.css" />
+        <script src="/components/range.js" type="module"></script>
+        <script src="smoking.js" type="module"></script>
+        <script src="customRangeEmojis.js" type="module"></script>
+        <link rel="stylesheet" href="/components/checkbox.css" />
+        <link rel="stylesheet" href="health.css" />
         <title>SHAMEM</title>
     </head>
     <body>
         <nav-bar></nav-bar>
         <main>
-            <section>
-                <h1 id="timeRemaining">10 years</h1>
-                <h1 id="currentAge">0 years old</h1>
-                <div class="rangeDiv">
-                    <input type="range" min="0" max="150" value="0" id="range" /> 
-                </div>
+            <article>
+                <h1 style="padding: 20px;">Calculate your life Expectancy</h1>
                 <div class="column">
-                    <div class="padding">
-                        <label class="container">Outdoors for 15 mins a day (0.4-4.2 years)<!--https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3395188/-->
-                            <input type="number" id="exercise" min="0" max="7" step="1" value="2" size="1">
-                        </label>
-                        <label class="container">No opioid addition (4 years)<!--https://www.cnbc.com/2023/08/03/8-habits-that-may-add-20-years-to-your-life-according-to-a-new-study.html-->
-                            <input type="checkbox" id="opioid">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container">No smoking (10 years)<!--https://www.bupa.co.uk/health-information/lungs-breathing/effects-of-smoking-->
-                            <input type="checkbox" id="smoking">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
+                    <section>
+                        <h2>Weight</h2>
+                        <range-bar number="y" vid="weight" other-id="" min="34" max="180" value="68" prefix="" suffix="kgs"></range-bar>
+                        <h2>Height</h2>
+                        <range-bar number="y" vid="height" other-id="" min="140" max="210" value="170" prefix="" suffix="cm"></range-bar>
+                    </section>
+                    <section>
+                        <h2>Outdoors for 15 mins a day</h2><!-- (0.4-4.2 years) https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3395188/-->
+                        <range-bar number="y" vid="exercise" other-id="" min="0" max="7" value="2" prefix="" suffix=" workouts/week"></range-bar>
+                    </section>
+                    <section>
+                        <h2>Alcohol intake per week</h2>
+                        <range-bar number="y" vid="alcohol" other-id="" min="0" max="3" value="1" prefix="" suffix=""></range-bar>
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function() {
+                                const slider = document.getElementById("alcohol");
+                                const oldSliderText = document.getElementById("alcohol-text");
+                                const sliderText = oldSliderText.cloneNode(true);
+                                oldSliderText.parentNode.replaceChild(sliderText, oldSliderText);
+                                sliderText.innerHTML = "Less than 2";
+
+                                slider.addEventListener("input", (event) => {
+                                    const tempSliderValue = Number(event.target.value);
+                                    switch (tempSliderValue) {
+                                        case 0:
+                                            sliderText.textContent = "No Alcohol ";
+                                            break;
+                                        case 1:
+                                            sliderText.textContent = "Less than 2";
+                                            break;
+                                        case 2:
+                                            sliderText.textContent = "between 2-7";
+                                            break;
+                                        case 3:
+                                            sliderText.textContent = "8+ Drinks  ";
+                                            break;
+                                    }
+                                    const progress = ((tempSliderValue - slider.min) / (slider.max - slider.min)) * 100;
+                                    slider.style.background = `linear-gradient(to right, #f50 ${progress}%, #ccc ${progress}%)`;
+                                    slider.style.setProperty("--thumb-rotate", `${(tempSliderValue/100) * 2160}deg`)
+                                })
+                            })
+                        </script>
+                    </section>
+                    <section>
+                        <div style="margin: 0 auto; width: fit-content;">
+                            <label class="container">No opioid addition<!--(4 years) https://www.cnbc.com/2023/08/03/8-habits-that-may-add-20-years-to-your-life-according-to-a-new-study.html-->
+                                <input type="checkbox" id="opioid">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </section>
+                    <section>
+                        <div style="margin: 0 auto; width: fit-content;">
+                            <label class="container">Sleeping at least 8 hours<!--(2.5-4.7) https://www.acc.org/About-ACC/Press-Releases/2023/02/22/21/35/Getting-Good-Sleep-Could-Add-Years-to-Your-Life#:~:text=Among%20men%20and%20women%20who,elements%20of%20low%2Drisk%20sleep.-->
+                                <input type="checkbox" id="sleeping">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>No smoking</h2><!--(10 years) https://www.bupa.co.uk/health-information/lungs-breathing/effects-of-smoking-->
+                        <table>
+                            <thead>
+                                <th></th>
+                                <th>Never Smoked</th>
+                                <th>Quit 10+ years</th>
+                                <th>Quit 1-9 years</th>
+                                <th>Quit &lt; 1 year</th>
+                                <th>Still smoke</th>
+                            </thead>
+                            <tr>
+                                <td>No smokes</td>
+                                <td class="table enabled selected" style="background-color: green;"></td>
+                                <td class="table"></td>
+                                <td class="table"></td>
+                                <td class="table"></td>
+                                <td class="table"></td>
+                            </tr>
+                            <tr>
+                                <td>1/2 pack a day</td>
+                                <td class="table"></td>
+                                <td class="table enabled" style="background-color: green;"></td>
+                                <td class="table enabled" style="background-color: lightgreen;"></td>
+                                <td class="table enabled" style="background-color: yellow;"></td>
+                                <td class="table enabled" style="background-color: orange;"></td>
+                            </tr>
+                            <tr>
+                                <td>Pack a day</td>
+                                <td class="table"></td>
+                                <td class="table enabled" style="background-color: lightgreen;"></td>
+                                <td class="table enabled" style="background-color: yellow;"></td>
+                                <td class="table enabled" style="background-color: orange;"></td>
+                                <td class="table enabled" style="background-color: red;"></td>
+                            </tr>
+                            <tr>
+                                <td>2 packs a day</td>
+                                <td class="table"></td>
+                                <td class="table enabled" style="background-color: yellow;"></td>
+                                <td class="table enabled" style="background-color: orange;"></td>
+                                <td class="table enabled" style="background-color: red;"></td>
+                                <td class="table enabled" style="background-color: red;"></td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <h1 style="padding-top: 20px;">Review</h1>
+                        <div class="reviewDiv">
+                            <div class="manDiv surface">
+                                <img class="man" src="https://cdn.pixabay.com/photo/2014/03/24/13/42/male-294095_1280.png" alt="man" height="300px" />
+                                <div class="bracket">
+                                    <h3 class="measurements">100cm<br/>100kg</h3>
+                                </div>
+                            </div>
+                            <div class="attributes">
+                                <div class="surface box"><h2>Exercise:<br/>2/week</h2></div>
+                                <div class="surface box"><h2>Alcohol:<br/>Less than 2</h2></div>
+                                <div class="surface box"><h2>Opioids:<br/>No</h2></div>
+                                <div class="surface box"><h2>Sleep:<br/>8+ hours</h2></div>
+                                <div class="surface box"><h2>Smoking:<br/>Never Smoked</h2></div>
+                                <div class="surface box"><button>See your results</button></div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                <div class="column">
-                    <div class="padding">
-                        <label class="container">Not drinking
-                            <input type="number" id="drinking" min="0" max="8" step="1" value="0" size="1">
-                        </label>
-                        <label class="container">Sleeping at least 8 hours (2.5-4.7)<!--https://www.acc.org/About-ACC/Press-Releases/2023/02/22/21/35/Getting-Good-Sleep-Could-Add-Years-to-Your-Life#:~:text=Among%20men%20and%20women%20who,elements%20of%20low%2Drisk%20sleep.-->
-                            <input type="checkbox" id="sleeping">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container">Weight (BMI)
-                            <input type="number" id="weight" min="34" max="180" step="5" value="68" size="3">
-                        </label>
-                        <label class="container">Height
-                            <input type="number" id="height" min="140" max="210" step="10" value="170" size="3">
-                        </label>
-                    </div>
-                </div>
-            </section>
+            </article>
         </main>
     </body>
 </html>
