@@ -138,6 +138,7 @@ h6 {
 .nav-item {
   margin-left: 5rem;
   padding: 1rem 0;
+  font-size: 1.6rem;
 }
 
 .nav-link {
@@ -192,7 +193,7 @@ h6 {
     position: fixed;
     justify-content: flex-start;
     left: -100%;
-    top: 5rem;
+    top: 5.8rem;
     flex-direction: column;
     background-color: #dbdbdb;
     width: 100%;
