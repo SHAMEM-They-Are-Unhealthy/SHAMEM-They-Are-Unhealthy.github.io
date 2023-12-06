@@ -6,18 +6,69 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="/components/NavBar.js" type="module"></script>
         <script src="/components/range.js" type="module"></script>
+        <script src="results.js" type="module"></script>
         <link rel="stylesheet" href="/components/checkbox.css" />
+        <link rel="stylesheet" href="results.css" />
         <title>SHAMEM</title>
     </head>
     <body>
         <nav-bar></nav-bar>
-        <main>
-            <section>
-                <h1 id="timeRemaining">10 years</h1>
-                <h1 id="currentAge">0 years old</h1>
-                <h2 id="extra Info"></h2>
-                <range-bar number="" vid="range" other-id="currentAge" min="0" max="150" value="0" prefix="" suffix=" years old"></range-bar>
-            </section>
+        <noscript>
+            <h1>Please Enable Javascript!</h1>
+        </noscript>
+        <h1 id="error" style="display: none;">400 Bad Request</h1>
+        <h1 id="loading">Loading your response...</h1>
+        <main style="display: none;">
+            <article>
+                <h1 style="padding: 20px;">Here are your results</h1>
+                <div class="column">
+                    <section>
+                        <h2 id="lifeExpectancy" style="padding: 10px;">You may live until you are: 40</h1>
+                    </section>
+                    <section>
+                        <h2 id="timeRemaining">10 years</h1>
+                        <h2 id="extraInfo">Dead!</h2>
+                        <range-bar number="y" vid="range" other-id="" min="0" max="150" value="0" prefix="" suffix=" years old"></range-bar>
+                    </section>
+                    <h2 style="font-size: 30px;">How we calculate it and what you can do!</h2>
+                    <hr style="margin: 15px;"/>
+                    <section>
+                        <h2 id="BMI"></h2>
+                        <h2 id="BMI-info"></h2>
+                        <img id="BMI-img" alt="man" height="300px"/><br/>
+                        <a href="https://irp.nih.gov/blog/post/2020/01/extreme-obesity-shaves-years-off-life-expectancy" target="_blank">Click here to see our source!</a>
+                    </section>
+                    <section>
+                        <h2>You are classed as: Inactive</h2>
+                        <h2>If you exercise more you can add up to 8 years to your life!</h2>
+                        <img src="fat.png" alt="fat" />
+                    </section>
+                    <section>
+                        <h2>You Never Drink</h2>
+                        <h2>Surprisingly if you do drink you could live longer!</h2>
+                        <img src="bottle.png" alt="bottle" />
+                    </section>
+                    <section>
+                        <h2>You do drugs!</h2>
+                        <h2>It may be too late for you but if you quit you can add up to 4 years to your life!</h2>
+                        <img src="pill.png" alt="pill" />
+                    </section>
+                    <section>
+                        <h2>Sleep for longer!</h2>
+                        <h2>A good nights sleep can add up to 4 years to your life!</h2>
+                        <img src="moon.png" alt="moon" />
+                    </section>
+                    <section>
+                        <h2>You have never smoked!</h2>
+                        <h2>You are at much lower risk of lung cancer and couldve already added 5 years to your life!</h2>
+                        <img src="cigarette.png" alt="cigarette" />
+                    </section>
+                    <section>
+                        <button onclick="">Download PDF</button>
+                        <br/>
+                    </section>
+                </div>
+            </article>
         </main>
     </body>
 </html>
