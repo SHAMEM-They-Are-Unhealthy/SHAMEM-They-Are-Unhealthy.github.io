@@ -88,9 +88,10 @@ function loadContent(){
         return`
         <article class="service">
         <div>
+            <br>
             <h1 class="title">${item.title}</h1>
             <img src=${item.img} class="photo"/>
-            <p class="desc"><b>${item.desc}</b></p>
+            <h2 class="desc"><b>${item.desc}</b></h2>
             <ul>
                  <li class="bullet1"> ${item.bullet1}</li>
                  <li class="bullet2">${item.bullet2}</li>

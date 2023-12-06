@@ -44,3 +44,7 @@ div{
     margin: 20px 0;
     display: inline-flex;
 }
+
+.title{
+    font-size: 2rem;
+}
