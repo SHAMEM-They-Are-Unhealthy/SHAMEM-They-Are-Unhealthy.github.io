@@ -23,8 +23,8 @@ function articlescall(){
         }
         console.log(liTitle)
         console.log(liURL)
-        localStorage.setItem("liTitle",JSON.parse(liTitle));
-        localStorage.setItem("liURL",JSON.parse(liURL));
+        localStorage.setItem("liTitle", JSON.stringify(liTitle));
+        localStorage.setItem("liURL", JSON.stringify(liURL));
     })
     .catch(error => {
         console.error('Error:', error);
@@ -34,10 +34,11 @@ function articlescall(){
 
 function addarticles(){
     articlescall();
-    title = localStorage.getItem("liTitle")
-    link = localStorage.getItem("liURL")
-    const liTitle = JSON.parse(title)
-    const liURL = JSON.parse(link)
+    title = localStorage.getItem("liTitle");
+    link = localStorage.getItem("liURL");
+    console.log(title);
+    const liTitle = JSON.parse(title);
+    const liURL = JSON.parse(link);
     var count = localStorage.getItem('count');
 
     for(i=0;i<count;i++){

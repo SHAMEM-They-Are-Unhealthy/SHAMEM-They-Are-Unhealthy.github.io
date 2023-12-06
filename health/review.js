@@ -66,4 +66,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('smoking-review').innerHTML = x + `<br/>` + y;
     });
+
+    document.querySelector('#submit').addEventListener('click', () => window.location = `results/?weight=${document.getElementById('weight').value}&height=${document.getElementById('height').value}&exercise=${document.getElementById('exercise').value}&alcohol=${document.getElementById('alcohol').value}&opioid=${document.getElementById('opioid').checked}&sleeping=${document.getElementById('sleeping').checked}&smoking=${document.getElementById('selected').value}`);
 });
