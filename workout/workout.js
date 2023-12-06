@@ -32,14 +32,16 @@ function loadContent(){
     let displayItem = index.map((item)=>{
         return`
         <article class="service">
-        <h1 class="title">${item.title}</h1>
-        <p class="desc"><b>${item.desc}</b></p>
-        <ul>
-            <li class="bullet1"> ${item.bullet1}</li>
-            <li class="bullet2">${item.bullet2}</li>
-            <li class="bullet3">${item.bullet3}</li>
-            <li class="bullet4">${item.bullet4}</li>
-        </ul>
+        <div>
+            <h1 class="title">${item.title}</h1>
+            <p class="desc"><b>${item.desc}</b></p>
+            <ul>
+                 <li class="bullet1"> ${item.bullet1}</li>
+                 <li class="bullet2">${item.bullet2}</li>
+                 <li class="bullet3">${item.bullet3}</li>
+                 <li class="bullet4">${item.bullet4}</li>
+             </ul>
+        </div>
         </article>
   
         `;
