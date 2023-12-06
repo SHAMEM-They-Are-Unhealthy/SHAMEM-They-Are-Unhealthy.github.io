@@ -7,6 +7,8 @@
         <script src="/components/NavBar.js" type="module"></script>
         <script src="/components/range.js" type="module"></script>
         <script src="results.js" type="module"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+        <script src="https://kit.fontawesome.com/9fcbeb9d9c.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/components/checkbox.css" />
         <link rel="stylesheet" href="results.css" />
         <title>SHAMEM</title>
@@ -35,13 +37,24 @@
                     <section>
                         <h2 id="BMI"></h2>
                         <h2 id="BMI-info"></h2>
-                        <img id="BMI-img" alt="man" height="300px"/><br/>
-                        <a href="https://irp.nih.gov/blog/post/2020/01/extreme-obesity-shaves-years-off-life-expectancy" target="_blank">Click here to see our source!</a>
+                        <div class="box">
+                            <img id="BMI-img" alt="man" height="300px"/>
+                            <div class="chart">
+                                <canvas id="BMI-chart"></canvas>
+                            </div>
+                        </div>
+                        <button onclick="window.open('https://irp.nih.gov/blog/post/2020/01/extreme-obesity-shaves-years-off-life-expectancy','_blank')">Click here to see our source!</button>
                     </section>
+                    <hr style="margin: 25px;"/>
                     <section>
-                        <h2>You are classed as: Inactive</h2>
-                        <h2>If you exercise more you can add up to 8 years to your life!</h2>
-                        <img src="fat.png" alt="fat" />
+                        <h2 id="active">You are classed as: Inactive</h2>
+                        <h2 id="active-info">If you exercise more you can add up to 8 years to your life!</h2>
+                        <div class="box">
+                            <img id="active-img" alt="man" height="300px"/>
+                            <div class="chart">
+                                <canvas id="active-chart"></canvas>
+                            </div>
+                        </div>
                     </section>
                     <section>
                         <h2>You Never Drink</h2>
