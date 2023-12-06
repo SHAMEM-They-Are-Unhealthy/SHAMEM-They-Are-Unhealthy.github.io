@@ -136,9 +136,17 @@ h6 {
 }
 
 .nav-item {
-  margin-left: 5rem;
+  margin-left: 10rem;
   padding: 1rem 0;
   font-size: 1.6rem;
+}
+
+.nav-menu a {
+  display: block;
+  font-weight: 600;
+}
+
+.nav-menu li {
 }
 
 .nav-link {
@@ -168,11 +176,13 @@ h6 {
   border-radius: 0.5rem;
   font-size: 1.6rem;
   height: 10rem;
+  display: flex;
   justify-content: space-between;
   flex-direction: column;
   padding: 1rem 3rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: none;
+  text-align: left;
 }
 
 .drop-down a:hover {
@@ -189,12 +199,10 @@ h6 {
   }
 
   .nav-menu {
-    display: flex;
+    display: block;
     position: fixed;
-    justify-content: flex-start;
     left: -100%;
     top: 5.8rem;
-    flex-direction: column;
     background-color: #dbdbdb;
     width: 100%;
     border: 1px solid var(--on-background);
@@ -202,7 +210,6 @@ h6 {
     transition: 0.1s;
     text-align: left;
     height: 100%;
-    width: 100%;
   }
 
   .nav-item {
@@ -212,6 +219,7 @@ h6 {
     font-weight: 600;
     padding-left: 3rem;
     margin-left: 0rem;
+    width: 100%;
   }
 
   .drop-down {
