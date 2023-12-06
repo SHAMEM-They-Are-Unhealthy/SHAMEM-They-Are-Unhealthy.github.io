@@ -1,5 +1,3 @@
-@import url('http://fonts.googleapis.com/css?family=Roboto');
-
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
@@ -164,11 +162,19 @@ button:active {
     background-image: var(--sliderImg) !important;
 }
 
+#weight::-moz-range-thumb {
+    background-image: var(--sliderImg) !important;
+}
+
 #height {
     --sliderImg: url("https://emoji.aranja.com/static/emoji-data/img-apple-160/1f62e.png");
 }
 
 #height::-webkit-slider-thumb {
+    background-image: var(--sliderImg) !important;
+}
+
+#height::-moz-range-thumb {
     background-image: var(--sliderImg) !important;
 }
 
@@ -180,11 +186,19 @@ button:active {
     background-image: var(--sliderImg) !important;
 }
 
+#exercise::-moz-range-thumb {
+    background-image: var(--sliderImg) !important;
+}
+
 #alcohol {
     --sliderImg: url("https://emoji.aranja.com/static/emoji-data/img-apple-160/1f62e.png");
 }
 
 #alcohol::-webkit-slider-thumb {
+    background-image: var(--sliderImg) !important;
+}
+
+#alcohol::-moz-range-thumb {
     background-image: var(--sliderImg) !important;
 }
 

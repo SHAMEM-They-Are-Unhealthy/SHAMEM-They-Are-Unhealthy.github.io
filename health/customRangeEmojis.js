@@ -1,4 +1,4 @@
-import "/components/imagePreload.js"
+import { preloadImages } from "/components/imagePreload.js"
 
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('weight').addEventListener('input', function() {

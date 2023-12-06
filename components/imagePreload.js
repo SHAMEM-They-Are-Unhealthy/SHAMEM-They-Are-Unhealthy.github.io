@@ -1,4 +1,4 @@
-function preloadImages(array) {
+export function preloadImages(array) {
     if (!preloadImages.list) {
         preloadImages.list = [];
     }
