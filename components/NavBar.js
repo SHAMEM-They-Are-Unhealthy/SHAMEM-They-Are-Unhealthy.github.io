@@ -22,7 +22,7 @@ class NavBar extends HTMLElement {
           <span class="dropdown-icon">
             <i class="fa-solid fa-caret-down"></i>
           </span>
-          <ul class="drop-down">
+          <ul class="drop-down" style="text-align: left;">
             <a href="/health/">
               <li>Health</li>
             </a>
