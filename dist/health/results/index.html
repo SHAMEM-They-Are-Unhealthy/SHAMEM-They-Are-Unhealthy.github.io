@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+        <script src="https://kit.fontawesome.com/9fcbeb9d9c.js" crossorigin="anonymous"></script>
+        <title>SHAMEM</title>
+      <script type="module" crossorigin src="/assets/results-fMGZVc_q.js"></script>
+      <link rel="modulepreload" crossorigin href="/assets/NavBar-VFa0SgT8.js">
+      <link rel="modulepreload" crossorigin href="/assets/checkbox-uKtnWPgi.js">
+      <link rel="stylesheet" crossorigin href="/assets/NavBar-lVjZwmtG.css">
+      <link rel="stylesheet" crossorigin href="/assets/checkbox-2m9lGj-N.css">
+      <link rel="stylesheet" crossorigin href="/assets/results-p-m9icaK.css">
+    </head>
+    <body>
+        <nav-bar></nav-bar>
+        <noscript>
+            <h1>Please Enable Javascript!</h1>
+        </noscript>
+        <h1 id="error" style="display: none;">400 Bad Request</h1>
+        <h1 id="loading">Loading your response...</h1>
+        <main style="display: none;">
+            <article>
+                <h1 style="padding: 20px;">Here are your results</h1>
+                <div class="column">
+                    <section>
+                        <h2 id="lifeExpectancy" style="padding: 10px;">You may live until you are: 40</h1>
+                    </section>
+                    <section>
+                        <h2 id="timeRemaining">10 years</h1>
+                        <h2 id="extraInfo">Dead!</h2>
+                        <range-bar number="y" vid="range" other-id="" min="0" max="150" value="0" prefix="" suffix=" years old"></range-bar>
+                    </section>
+                    <h2 style="font-size: 30px;">How we calculate it and what you can do!</h2>
+                    <hr style="margin: 15px;"/>
+                    <section>
+                        <h2 id="BMI"></h2>
+                        <h2 id="BMI-info"></h2>
+                        <div class="box">
+                            <div style="position: relative;">
+                                <img id="BMI-img" alt="man" height="300px"/>
+                                <h2 class="lifeExpectancy" id="BMI-LE"></h2>
+                            </div>
+                            <div class="chart">
+                                <canvas id="BMI-chart"></canvas>
+                            </div>
+                        </div>
+                        <button onclick="window.open('https://irp.nih.gov/blog/post/2020/01/extreme-obesity-shaves-years-off-life-expectancy','_blank')">Click here to see our source!</button>
+                    </section>
+                    <hr style="margin: 25px;"/>
+                    <section>
+                        <h2 id="active"></h2>
+                        <h2 id="active-info"></h2>
+                        <div class="box">
+                            <div style="position: relative;">
+                                <img id="active-img" alt="man" height="300px"/>
+                                <h2 class="lifeExpectancy" id="active-LE"></h2>
+                            </div>
+                            <div class="chart">
+                                <canvas id="active-chart"></canvas>
+                            </div>
+                        </div>
+                        <button onclick="window.open('https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3395188/','_blank')">Click here to see our source!</button>
+                    </section>
+                    <hr style="margin: 25px;"/>
+                    <section>
+                        <h2 id="alcohol">You Never Drink</h2>
+                        <h2 id="alcohol-info">Surprisingly if you do drink you could live longer!</h2>
+                        <div class="box">
+                            <div style="position: relative;">
+                                <img src="https://cdn.pixabay.com/photo/2014/03/24/13/42/male-294095_1280.png" alt="man" height="300px" />
+                                <h2 class="lifeExpectancy" id="alcohol-LE"></h2>
+                            </div>
+                            <div class="chart">
+                                <canvas id="alcohol-chart"></canvas>
+                            </div>
+                        </div>
+                        <button onclick="window.open('https://www.blueprintincome.com/tools/life-expectancy-calculator-how-long-will-i-live/info/alcohol','_blank')">Click here to see our source!</button>
+                    </section>
+                    <hr style="margin: 25px;"/>
+                    <section>
+                        <h2 id="opioids">You do drugs!</h2>
+                        <h2 id="opioids-info">It may be too late for you but if you quit you can add up to 4 years to your life!</h2>
+                        <div class="box">
+                            <div style="position: relative;">
+                                <img src="https://cdn.pixabay.com/photo/2014/03/24/13/42/male-294095_1280.png" alt="man" height="300px" />
+                                <h2 class="lifeExpectancy" id="opioids-LE"></h2>
+                            </div>
+                            <div class="chart">
+                                <canvas id="opioids-chart"></canvas>
+                            </div>
+                        </div>
+                        <button onclick="window.open('','_blank')">Click here to see our source!</button>
+                    </section>
+                    <hr style="margin: 25px;"/>
+                    <section>
+                        <h2 id="sleep">Sleep for longer!</h2>
+                        <h2 id="sleep-info">A good nights sleep can add up to 4 years to your life!</h2>
+                        <div class="box">
+                            <div style="position: relative;">
+                                <img src="https://cdn.pixabay.com/photo/2014/03/24/13/42/male-294095_1280.png" alt="man" height="300px" />
+                                <h2 class="lifeExpectancy" id="sleep-LE"></h2>
+                            </div>
+                            <div class="chart">
+                                <canvas id="sleep-chart"></canvas>
+                            </div>
+                        </div>
+                        <button onclick="window.open('','_blank')">Click here to see our source!</button>
+                    </section>
+                    <hr style="margin: 25px;"/>
+                    <section>
+                        <h2 id="smoking">You have never smoked!</h2>
+                        <h2 id="smoking-info">You are at much lower risk of lung cancer and couldve already added 5 years to your life!</h2>
+                        <div class="box">
+                            <div style="position: relative;">
+                                <img src="https://cdn.pixabay.com/photo/2014/03/24/13/42/male-294095_1280.png" alt="man" height="300px" />
+                                <h2 class="lifeExpectancy" id="smoking-LE"></h2>
+                            </div>
+                            <div class="chart">
+                                <canvas id="smoking-chart"></canvas>
+                            </div>
+                        </div>
+                        <button onclick="window.open('','_blank')">Click here to see our source!</button>
+                    </section>
+                    <hr style="margin: 25px;"/>
+                    <section>
+                        <button onclick="">Download PDF</button>
+                        <br/>
+                    </section>
+                </div>
+            </article>
+        </main>
+    </body>
+</html>
