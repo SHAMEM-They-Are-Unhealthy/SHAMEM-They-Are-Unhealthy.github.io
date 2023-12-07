@@ -3,12 +3,15 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://kit.fontawesome.com/9fcbeb9d9c.js" crossorigin="anonymous"></script>
         <title>SHAMEM</title>
-      <script type="module" crossorigin src="/assets/health-LpFS6HRu.js"></script>
-      <link rel="modulepreload" crossorigin href="/assets/NavBar-y7bR-y7T.js">
-      <link rel="stylesheet" crossorigin href="/assets/NavBar-Qq1fqyx6.css">
-      <link rel="stylesheet" crossorigin href="/assets/health-Ux2QUVnm.css">
+      <script type="module" crossorigin src="/assets/health-hTp7NhdN.js"></script>
+      <link rel="modulepreload" crossorigin href="/assets/NavBar-VFa0SgT8.js">
+      <link rel="modulepreload" crossorigin href="/assets/checkbox-uKtnWPgi.js">
+      <link rel="stylesheet" crossorigin href="/assets/NavBar-lVjZwmtG.css">
+      <link rel="stylesheet" crossorigin href="/assets/checkbox-2m9lGj-N.css">
+      <link rel="stylesheet" crossorigin href="/assets/health-TLOQuoKW.css">
     </head>
     <body>
         <nav-bar></nav-bar>
@@ -28,13 +31,14 @@
                     </section>
                     <section>
                         <h2>Alcohol intake per week</h2>
-                        <range-bar number="y" vid="alcohol" other-id="" min="0" max="3" value="1" prefix="" suffix=""></range-bar>
+                        <range-bar number="y" vid="alcohol" no-input="y" other-id="" min="0" max="3" value="1" prefix="" suffix=""></range-bar>
                         <script>
                             document.addEventListener("DOMContentLoaded", function() {
-                                const slider = document.getElementById("alcohol");
-                                const oldSliderText = document.getElementById("alcohol-text");
-                                const sliderText = oldSliderText.cloneNode(true);
-                                oldSliderText.parentNode.replaceChild(sliderText, oldSliderText);
+                                const oldSlider = document.getElementById("alcohol");
+                                const slider = oldSlider.cloneNode(true);
+                                oldSlider.parentNode.replaceChild(slider, oldSlider);
+
+                                const sliderText = document.getElementById("alcohol-text");
                                 sliderText.innerHTML = "Less than 2";
 
                                 slider.addEventListener("input", (event) => {
@@ -63,7 +67,7 @@
                     <section>
                         <div style="margin: 0 auto; width: fit-content;">
                             <label class="container">No opioid addition<!--(4 years) https://www.cnbc.com/2023/08/03/8-habits-that-may-add-20-years-to-your-life-according-to-a-new-study.html-->
-                                <input type="checkbox" id="opioid">
+                                <input type="checkbox" id="opioid" checked>
                                 <span class="checkmark"></span>
                             </label>
                         </div>
@@ -71,7 +75,7 @@
                     <section>
                         <div style="margin: 0 auto; width: fit-content;">
                             <label class="container">Sleeping at least 8 hours<!--(2.5-4.7) https://www.acc.org/About-ACC/Press-Releases/2023/02/22/21/35/Getting-Good-Sleep-Could-Add-Years-to-Your-Life#:~:text=Among%20men%20and%20women%20who,elements%20of%20low%2Drisk%20sleep.-->
-                                <input type="checkbox" id="sleeping">
+                                <input type="checkbox" id="sleeping" checked>
                                 <span class="checkmark"></span>
                             </label>
                         </div>
@@ -89,7 +93,7 @@
                             </thead>
                             <tr>
                                 <td>No smokes</td>
-                                <td class="table enabled selected" style="background-color: green;"></td>
+                                <td class="table enabled selected" style="background-color: green;" value="00"></td>
                                 <td class="table"></td>
                                 <td class="table"></td>
                                 <td class="table"></td>
@@ -98,28 +102,29 @@
                             <tr>
                                 <td>1/2 pack a day</td>
                                 <td class="table"></td>
-                                <td class="table enabled" style="background-color: green;"></td>
-                                <td class="table enabled" style="background-color: lightgreen;"></td>
-                                <td class="table enabled" style="background-color: yellow;"></td>
-                                <td class="table enabled" style="background-color: orange;"></td>
+                                <td class="table enabled" style="background-color: green;" value="11"></td>
+                                <td class="table enabled" style="background-color: lightgreen;" value="12"></td>
+                                <td class="table enabled" style="background-color: yellow;" value="13"></td>
+                                <td class="table enabled" style="background-color: orange;" value="14"></td>
                             </tr>
                             <tr>
                                 <td>Pack a day</td>
                                 <td class="table"></td>
-                                <td class="table enabled" style="background-color: lightgreen;"></td>
-                                <td class="table enabled" style="background-color: yellow;"></td>
-                                <td class="table enabled" style="background-color: orange;"></td>
-                                <td class="table enabled" style="background-color: red;"></td>
+                                <td class="table enabled" style="background-color: lightgreen;" value="21"></td>
+                                <td class="table enabled" style="background-color: yellow;" value="22"></td>
+                                <td class="table enabled" style="background-color: orange;" value="23"></td>
+                                <td class="table enabled" style="background-color: red;" value="24"></td>
                             </tr>
                             <tr>
                                 <td>2 packs a day</td>
                                 <td class="table"></td>
-                                <td class="table enabled" style="background-color: yellow;"></td>
-                                <td class="table enabled" style="background-color: orange;"></td>
-                                <td class="table enabled" style="background-color: red;"></td>
-                                <td class="table enabled" style="background-color: red;"></td>
+                                <td class="table enabled" style="background-color: yellow;" value="31"></td>
+                                <td class="table enabled" style="background-color: orange;" value="32"></td>
+                                <td class="table enabled" style="background-color: red;" value="33"></td>
+                                <td class="table enabled" style="background-color: red;" value="34"></td>
                             </tr>
                         </table>
+                        <input type="hidden" id="selected" value="00" />
                     </section>
                     <section>
                         <h1 style="padding-top: 20px;">Review</h1>
@@ -127,16 +132,19 @@
                             <div class="manDiv surface">
                                 <img class="man" src="https://cdn.pixabay.com/photo/2014/03/24/13/42/male-294095_1280.png" alt="man" height="300px" />
                                 <div class="bracket">
-                                    <h3 class="measurements">100cm<br/>100kg</h3>
+                                    <div class="measurements">
+                                        <h3 id="height-review">170cm</h3>
+                                        <h3 id="weight-review">68kg</h3>
+                                    </div>
                                 </div>
                             </div>
                             <div class="attributes">
-                                <div class="surface box"><h2>Exercise:<br/>2/week</h2></div>
-                                <div class="surface box"><h2>Alcohol:<br/>Less than 2</h2></div>
-                                <div class="surface box"><h2>Opioids:<br/>No</h2></div>
-                                <div class="surface box"><h2>Sleep:<br/>8+ hours</h2></div>
-                                <div class="surface box"><h2>Smoking:<br/>Never Smoked</h2></div>
-                                <div class="surface box"><button>See your results</button></div>
+                                <div class="surface box"><div><h2>Exercise:</h2><h2 id="exercise-review">2/week</h2></div></div>
+                                <div class="surface box"><div><h2>Alcohol:</h2><h2 id="alcohol-review">Less than 2</h2></div></div>
+                                <div class="surface box"><div><h2>Opioids:</h2><h2 id="opioid-review">No</h2></div></div>
+                                <div class="surface box"><div><h2>Sleep:</h2><h2 id="sleeping-review">8+ hours</h2></div></div>
+                                <div class="surface box"><div><h2>Smoking:</h2><h2 id="smoking-review">Never Smoked</h2></div></div>
+                                <div class="surface box"><button id="submit">See your results</button></div>
                             </div>
                         </div>
                     </section>
