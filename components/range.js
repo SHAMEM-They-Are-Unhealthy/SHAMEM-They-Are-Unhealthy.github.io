@@ -55,6 +55,6 @@ document.addEventListener("DOMContentLoaded", function() {
             const progress = ((tempSliderValue - slider.min) / (slider.max - slider.min)) * 100;
             slider.style.background = `linear-gradient(to right, #f50 ${progress}%, #ccc ${progress}%)`;
             slider.style.setProperty("--thumb-rotate", `${(tempSliderValue/100) * 2160}deg`)
-        })
+        });
     }
 });
