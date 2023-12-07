@@ -78,8 +78,13 @@
     }
     .info-container{
         max-width: 400px;
-        min-width: 370px;
+        min-width: 325px;
     }
+
+    .bottom p{
+        max-width:125px;
+    }
+
     .bottom img{
         width: 200px;
         height: 200px;
