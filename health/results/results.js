@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const smoking = String(params.smoking);
         const BMI = weight / ((height / 100) * (height / 100)); //18.5-57.5
 
+        if (weight > 180 || weight < 34 || height > 210 || height < 140 || exercise > 7 || exercise < 0 || alcohol > 3 || alcohol < 0) {
+            throw "400 Error";
+        }
+
         let lifeExpectancy = 81;
 
         /********************************************************************************************************************************************************/
@@ -321,7 +325,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (this.value < lifeExpectancy + 5) {
                 this.style.setProperty("--sliderImg", "url(https://emoji.aranja.com/static/emoji-data/img-apple-160/1f622.png)");
                 document.getElementById("extraInfo").innerHTML = "Dead!";
-            }else if (this.value < lifeExpectancy + 10) {
+            } else if (this.value < lifeExpectancy + 10) {
                 this.style.setProperty("--sliderImg", "url(https://emoji.aranja.com/static/emoji-data/img-apple-160/1f62e.png)");
                 document.getElementById("extraInfo").innerHTML = "It's possible you would still be here!";
             } else if (this.value < 120) {
