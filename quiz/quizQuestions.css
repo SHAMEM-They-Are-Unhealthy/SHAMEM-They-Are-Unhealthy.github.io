@@ -3,21 +3,20 @@ html {
 }
 
 body {
-  height: 85vh;
+  height: 90vh;
 }
 
 .center {
   margin-top: 3rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
   height: 100%;
 }
 
 .question-number {
-  font-size: 5rem;
-  font-weight: bold;
+  font-size: calc(2vw + 1vh + 1vmin);
 }
 
 .header-container {
@@ -27,15 +26,16 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 0 2rem;
+  font-size: calc(2vw + 1vh + 1vmin);
 }
 
 .question-title {
-  margin: 3rem 1rem;
-  font-size: 6rem;
+  margin: 2rem 1rem;
+  font-size: calc(2vw + 1vh + 1vmin);
 }
 
-.timer {
-  font-size: 3rem;
+.timer h2 {
+  font-size: calc(2vw + 1vh + 1vmin);
   padding: 1rem;
   background-color: #128300;
   color: white;
@@ -54,10 +54,10 @@ body {
   padding: 2rem;
   border-radius: 8px;
   margin: 2rem;
-  flex: 1 0 45%;
+  flex: 1 0 40%;
   background-color: rgb(209, 209, 209);
   align-items: center;
-  font-size: 5rem;
+  font-size: calc(2vh + 1vw);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -69,10 +69,10 @@ body {
   .answer {
     flex: 1 1 80%;
     margin: 1rem;
-    font-size: 1.3rem;
+    min-height: 80px;
   }
-  .question-title {
-    font-size: 2rem;
+  .answer-container {
+    margin-top: 0;
   }
   .question-number {
     margin-top: 1rem;
