@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/components/NavBar.js" type="module"></script>
+    <script src="/quiz/register/" type="module"></script>
+
+    <title>SHAMEM</title>
+    <link rel="stylesheet" href="/quiz/quiz.css" />
+    <script
+      src="https://kit.fontawesome.com/9fcbeb9d9c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav-bar></nav-bar>
+    <div class="center">
+      <div class="login-container">
+        <div class="login-logo">
+          <img id="logo-img" style="width: 170px; height: auto" />
+        </div>
+        <div class="head-text">
+          <h1>Register</h1>
+          <div class="head-p">
+            <p class="login-p">Already have an account?</p>
+            <a class="sign-up" href="/quiz/login/"> Log in </a>
+          </div>
+        </div>
+        <div class="form-container">
+          <form action="">
+            <div class="username field">
+              <label for="username">Username</label>
+              <input type="text" id="username" />
+            </div>
+            <div class="email field">
+              <label for="email">Email</label>
+              <input type="email" id="email" />
+            </div>
+            <div class="password field">
+              <label for="password">Password</label>
+              <input type="password" id="password" />
+            </div>
+            <div class="form-control">
+              <p class="alert"></p>
+              <button type="submit" class="submit-btn">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
