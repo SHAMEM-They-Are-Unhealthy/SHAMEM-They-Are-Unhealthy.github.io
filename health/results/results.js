@@ -1,4 +1,4 @@
-import { preloadImages } from "/components/imagePreload.js"
+import { preloadImages } from "/components/imagePreload.js";
 
 document.addEventListener("DOMContentLoaded", function() {
     const params = new Proxy(new URLSearchParams(window.location.search), {
@@ -307,6 +307,10 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("timeRemaining").innerHTML = String(lifeExpectancy) + " years left";
         document.getElementById("extraInfo").innerHTML = "You are a baby";
 
+        document.getElementById("pdfDownload").addEventListener('click', function() {
+            window.print();
+        });
+
         document.getElementById("range").addEventListener('input', function() {
             if (lifeExpectancy - this.value >= 0) {
                 document.getElementById("timeRemaining").innerHTML = String(Math.round((lifeExpectancy - this.value) * 10) / 10) + " years left";
@@ -336,6 +340,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.getElementById("extraInfo").innerHTML = "Seriously?";
             }
         });
+
         preloadImages(["https://emoji.aranja.com/static/emoji-data/img-apple-160/1f476.png", "https://emoji.aranja.com/static/emoji-data/img-apple-160/1f600.png", "https://emoji.aranja.com/static/emoji-data/img-apple-160/1f614.png", "https://emoji.aranja.com/static/emoji-data/img-apple-160/1f622.png", "https://emoji.aranja.com/static/emoji-data/img-apple-160/1f62e.png", "https://emoji.aranja.com/static/emoji-data/img-apple-160/1f635.png", "https://emoji.aranja.com/static/emoji-data/img-apple-160/2620-fe0f.png"]);
     } catch (err) {
         document.getElementById("error").style.display = "block";

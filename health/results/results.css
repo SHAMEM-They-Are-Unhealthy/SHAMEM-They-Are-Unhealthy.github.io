@@ -151,3 +151,19 @@ button:active {
         height: fit-content;
     }
 }
+
+@media print {
+    .noPrint, nav-bar, range-bar, button {
+        display: none;
+    }
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    hr:not(.samePage) {
+        page-break-after: always;
+    }
+    hr:not(.showPrint) {
+        visibility: hidden;
+    }
+}

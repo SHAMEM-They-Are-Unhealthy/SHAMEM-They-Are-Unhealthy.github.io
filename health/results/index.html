@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="/components/NavBar.js" type="module"></script>
         <script src="/components/range.js" type="module"></script>
-        <script src="results.js" type="module"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
         <script src="https://kit.fontawesome.com/9fcbeb9d9c.js" crossorigin="anonymous"></script>
+        <script src="results.js" type="module"></script>
         <link rel="stylesheet" href="/components/checkbox.css" />
         <link rel="stylesheet" href="results.css" />
         <title>SHAMEM</title>
@@ -29,11 +29,11 @@
                     </section>
                     <section>
                         <h2 id="timeRemaining"></h1>
-                        <h2 id="extraInfo"></h2>
+                        <h2 id="extraInfo" class="noPrint"></h2>
                         <range-bar number="y" vid="range" other-id="" min="0" max="150" value="0" prefix="" suffix=" years old"></range-bar>
                     </section>
                     <h2 style="font-size: 30px;">How we calculate it and what you can do!</h2>
-                    <hr style="margin: 15px;"/>
+                    <hr style="margin: 15px;" class="samePage showPrint"/>
                     <section>
                         <h2 id="BMI"></h2>
                         <h2 id="BMI-info"></h2>
@@ -189,9 +189,9 @@
                         </div>
                         <button onclick="window.open('','_blank')">Click here to see our source!</button>
                     </section>
-                    <hr style="margin: 25px;"/>
+                    <hr style="margin: 25px;" class="samePage"/>
                     <section>
-                        <button onclick="">Download PDF</button>
+                        <button id="pdfDownload">Download PDF</button>
                         <br/>
                     </section>
                 </div>
