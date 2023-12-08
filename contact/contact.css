@@ -33,6 +33,7 @@ textarea {
   border-color: black;
   border-radius: 6px;
   padding: 5px;
+  resize: none;
 }
 
 label {
@@ -102,5 +103,11 @@ textarea {
   }
   .input-column {
     width: 32%;
+  }
+  .enquiry-form {
+    height: 100%;
+  }
+  textarea {
+    height: 100%;
   }
 }
