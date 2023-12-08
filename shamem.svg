@@ -2,13 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="69.736763mm"
-   height="49.526707mm"
-   viewBox="0 0 69.736763 49.526707"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="favicon2.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="shamem-1.svg.2023_12_02_16_11_57.0.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,13 +24,13 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.0444209"
-     inkscape:cx="28.245318"
-     inkscape:cy="73.725066"
+     inkscape:zoom="1.4770342"
+     inkscape:cx="401.14169"
+     inkscape:cy="306.01864"
      inkscape:window-width="1920"
-     inkscape:window-height="986"
-     inkscape:window-x="-11"
-     inkscape:window-y="-11"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
@@ -38,8 +38,7 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(-36.507517,-58.161535)">
+     id="layer1">
     <path
        id="text236"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.4869px;line-height:1.25;font-family:'Berlin Sans FB Demi';-inkscape-font-specification:'Berlin Sans FB Demi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1.45074"
@@ -54,6 +53,16 @@
        cy="65.160973"
        rx="6.8887162"
        ry="6.9994378" />
+    <path
+       style="fill:none;stroke-width:0.288598"
+       d="m 353.90425,451.10426 v -45.82183 l -1.37636,-0.27659 c -2.93894,-0.59061 -3.64153,-0.82295 -3.44525,-1.13931 0.18006,-0.2902 1.27375,-0.15026 4.28303,0.54801 l 0.53858,0.12497 v -5.86606 -5.86605 l 17.97543,-0.0628 c 9.88648,-0.0346 17.99205,-0.009 18.01237,0.0568 0.0203,0.0658 0.01,23.52081 -0.024,52.12219 l -0.0609,52.0025 H 371.8557 353.90425 Z"
+       id="path804"
+       transform="scale(0.26458333)" />
+    <path
+       style="fill:none;stroke-width:0.288598"
+       d="m 353.90425,451.10426 v -45.82183 l -1.37636,-0.27659 c -2.93894,-0.59061 -3.64153,-0.82295 -3.44525,-1.13931 0.18006,-0.2902 1.27375,-0.15026 4.28303,0.54801 l 0.53858,0.12497 v -5.86606 -5.86605 l 17.97543,-0.0628 c 9.88648,-0.0346 17.99205,-0.009 18.01237,0.0568 0.0203,0.0658 0.01,23.52081 -0.024,52.12219 l -0.0609,52.0025 H 371.8557 353.90425 Z"
+       id="path806"
+       transform="scale(0.26458333)" />
     <path
        id="rect293"
        style="fill:#000080;stroke-width:0.319"
@@ -70,5 +79,45 @@
        x="19.35173"
        y="114.6552"
        transform="matrix(0.89201236,-0.45201101,0.44730232,0.89438282,0,0)" />
+    <rect
+       style="fill:#000000;stroke-width:0.319"
+       id="rect430"
+       width="1.1399858"
+       height="51.706108"
+       x="115.61991"
+       y="58.161537" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6389px;line-height:1.25;font-family:Archive;-inkscape-font-specification:'Archive, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#008000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="122.43754"
+       y="77.844559"
+       id="text490"><tspan
+         sodipodi:role="line"
+         id="tspan488"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6389px;font-family:Archive;-inkscape-font-specification:'Archive, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583;fill:#008000"
+         x="122.43754"
+         y="77.844559">SHAMEM</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.0865px;line-height:1.25;font-family:Archive;-inkscape-font-specification:'Archive, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.352162"
+       x="121.87137"
+       y="90.276192"
+       id="text494"><tspan
+         sodipodi:role="line"
+         id="tspan492"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.0865px;font-family:Archive;-inkscape-font-specification:'Archive, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.352162"
+         x="121.87137"
+         y="90.276192">RESEARCH</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.6825px;line-height:1.25;font-family:Archive;-inkscape-font-specification:'Archive, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.292062"
+       x="122.04915"
+       y="101.03664"
+       id="text548"><tspan
+         sodipodi:role="line"
+         id="tspan546"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.6825px;font-family:Archive;-inkscape-font-specification:'Archive, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.292062"
+         x="122.04915"
+         y="101.03664">FOUNDATION</tspan></text>
   </g>
 </svg>
