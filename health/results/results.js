@@ -58,25 +58,25 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("BMI").innerHTML = "You are classed as: Overweight - BMI: " + Math.round(BMI * 10) / 10;
             lifeExpectancy = (-0.383 * BMI) + 90;
             document.getElementById("BMI-info").innerHTML = "If you reduce your weight you can add up to " + (Math.round((81 - lifeExpectancy) * 10) / 10) + " years to your life!";
-            src = "fat.png";
+            src = "https://github.com/SHAMEM-They-Are-Unhealthy/SHAMEM-They-Are-Unhealthy.github.io/blob/main/health/results/fat.png?raw=true";
             document.getElementById("BMI-img").className = "orangeImg";
         } else if (BMI < 40) {
             document.getElementById("BMI").innerHTML = "You are classed as: Obese - BMI: " + Math.round(BMI * 10) / 10;
             lifeExpectancy = (-0.383 * BMI) + 90;
             document.getElementById("BMI-info").innerHTML = "Your life is going to be much shorter than average but if you reduce your weight you can add up to " + (Math.round((81 - lifeExpectancy) * 10) / 10) + " years to your life!";
-            src = "fat.png";
+            src = "https://github.com/SHAMEM-They-Are-Unhealthy/SHAMEM-They-Are-Unhealthy.github.io/blob/main/health/results/fat.png?raw=true";
             document.getElementById("BMI-img").className = "redImg";
         } else if (BMI > 57.5) {
             document.getElementById("BMI").innerHTML = "You are classed as: Extremely Obese - BMI: " + Math.round(BMI * 10) / 10;
             lifeExpectancy = 67.3;
             document.getElementById("BMI-info").innerHTML = "This calculator may be off as your weight is so large, however, if you reduce your weight you can add up to " + (Math.round((81 - lifeExpectancy) * 10) / 10) + " years to your life!";
-            src = "fat.png";
+            src = "https://github.com/SHAMEM-They-Are-Unhealthy/SHAMEM-They-Are-Unhealthy.github.io/blob/main/health/results/fat.png?raw=true";
             document.getElementById("BMI-img").className = "redImg";
         } else {
             document.getElementById("BMI").innerHTML = "You are classed as: Extremely Obese - BMI: " + Math.round(BMI * 10) / 10;
             lifeExpectancy = (-0.383 * BMI) + 90;
             document.getElementById("BMI-info").innerHTML = "It is vital that you start to lose weight now as it is probably the way to improve your life the most, if you reduce your weight you can add up to " + (Math.round((81 - lifeExpectancy) * 10) / 10) + " years to your life!";
-            src = "fat.png";
+            src = "https://github.com/SHAMEM-They-Are-Unhealthy/SHAMEM-They-Are-Unhealthy.github.io/blob/main/health/results/fat.png?raw=true";
             document.getElementById("BMI-img").className = "redImg";
         }
         document.getElementById("BMI-img").src = src;
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.getElementById("active").innerHTML = "You are classed as: Inactive";
                 document.getElementById("active-info").innerHTML = "Your life expectancy will be lower than average as you don't exercise enough";
                 document.getElementById("active-img").className = "redImg";
-                src = "fat.png";
+                src = "https://github.com/SHAMEM-They-Are-Unhealthy/SHAMEM-They-Are-Unhealthy.github.io/blob/main/health/results/fat.png?raw=true";
                 break;
             case 2: case 3: case 4:
                 document.getElementById("active").innerHTML = "You are classed as: Active";
