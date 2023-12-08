@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="/components/NavBar.js" type="module"></script>
         <script src="/components/range.js" type="module"></script>
-        <script src="results.js" type="module"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
         <script src="https://kit.fontawesome.com/9fcbeb9d9c.js" crossorigin="anonymous"></script>
+        <script src="results.js" type="module"></script>
         <link rel="stylesheet" href="/components/checkbox.css" />
         <link rel="stylesheet" href="results.css" />
         <title>SHAMEM</title>
@@ -25,20 +25,23 @@
                 <h1 style="padding: 20px;">Here are your results</h1>
                 <div class="column">
                     <section>
-                        <h2 id="lifeExpectancy" style="padding: 10px;">You may live until you are: 40</h1>
+                        <h2 id="lifeExpectancy" style="padding: 10px;"></h1>
                     </section>
                     <section>
-                        <h2 id="timeRemaining">10 years</h1>
-                        <h2 id="extraInfo">Dead!</h2>
+                        <h2 id="timeRemaining"></h1>
+                        <h2 id="extraInfo" class="noPrint"></h2>
                         <range-bar number="y" vid="range" other-id="" min="0" max="150" value="0" prefix="" suffix=" years old"></range-bar>
                     </section>
                     <h2 style="font-size: 30px;">How we calculate it and what you can do!</h2>
-                    <hr style="margin: 15px;"/>
+                    <hr style="margin: 15px;" class="samePage showPrint"/>
                     <section>
                         <h2 id="BMI"></h2>
                         <h2 id="BMI-info"></h2>
                         <div class="box">
-                            <img id="BMI-img" alt="man" height="300px"/>
+                            <div style="position: relative;">
+                                <img id="BMI-img" alt="man" height="300px"/>
+                                <h2 class="lifeExpectancy" id="BMI-LE"></h2>
+                            </div>
                             <div class="chart">
                                 <canvas id="BMI-chart"></canvas>
                             </div>
@@ -47,37 +50,148 @@
                     </section>
                     <hr style="margin: 25px;"/>
                     <section>
-                        <h2 id="active">You are classed as: Inactive</h2>
-                        <h2 id="active-info">If you exercise more you can add up to 8 years to your life!</h2>
+                        <h2 id="active"></h2>
+                        <h2 id="active-info"></h2>
                         <div class="box">
-                            <img id="active-img" alt="man" height="300px"/>
+                            <div style="position: relative;">
+                                <img id="active-img" alt="man" height="300px"/>
+                                <h2 class="lifeExpectancy" id="active-LE"></h2>
+                            </div>
                             <div class="chart">
                                 <canvas id="active-chart"></canvas>
                             </div>
                         </div>
+                        <button onclick="window.open('https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3395188/','_blank')">Click here to see our source!</button>
                     </section>
+                    <hr style="margin: 25px;"/>
                     <section>
-                        <h2>You Never Drink</h2>
-                        <h2>Surprisingly if you do drink you could live longer!</h2>
-                        <img src="bottle.png" alt="bottle" />
+                        <h2 id="alcohol"></h2>
+                        <h2 id="alcohol-info"></h2>
+                        <div class="box">
+                            <div style="position: relative;">
+                                <img src="https://cdn.pixabay.com/photo/2014/03/24/13/42/male-294095_1280.png" id="alcohol-img" alt="man" height="300px" />
+                                <h2 class="lifeExpectancy" id="alcohol-LE"></h2>
+                            </div>
+                            <div class="chart">
+                                <div id="alcohol-chart">
+                                    <div class="alcohol-box" id="alcohol-zero">
+                                        <h2 id="alcohol-zero-text">81</h2>
+                                        <img style="margin: 0 auto" src="https://static.blueprintincome-prod.cloud/static/web/master-1.128-2-g561b65256/rassets/longevity-calc/new_icons/alcohol1@3x-c34e24e55103148b894db1fe8fadc8b40f952836d38ac43fd11200b0ac1a75f8.png" alt="zero drinks" height="70px" />
+                                        <h3>Zero</h3>
+                                    </div>
+                                    <div class="alcohol-box" id="alcohol-two">
+                                        <h2 id="alcohol-two-text">89.3</h2>
+                                        <img style="margin: 0 auto" src="https://static.blueprintincome-prod.cloud/static/web/master-1.128-2-g561b65256/rassets/longevity-calc/new_icons/alcohol2@3x-57c7a93075360b16dee7642349994007faca8ef1beb72c5d2d3daa19f971abec.png" alt="one drink" height="70px" />
+                                        <h3>Fewer Than 2 Drinks Per Week</h3>
+                                    </div>
+                                    <div class="alcohol-box" id="alcohol-seven">
+                                        <h2 id="alcohol-seven-text">90.1</h2>
+                                        <img style="margin: 0 auto" src="https://static.blueprintincome-prod.cloud/static/web/master-1.128-2-g561b65256/rassets/longevity-calc/new_icons/alcohol3@3x-47b17a066a6f41a1a67a3ad841a0b61866a1f5815675d883599cf250ce4cdab6.png" alt="two drinks" height="70px" />
+                                        <h3>2-7 Drinks Per Week</h3>
+                                    </div>
+                                    <div class="alcohol-box" id="alcohol-eight">
+                                        <h2 id="alcohol-eight-text">88.8</h2>
+                                        <img style="margin: 0 auto" src="https://static.blueprintincome-prod.cloud/static/web/master-1.128-2-g561b65256/rassets/longevity-calc/new_icons/alcohol4@3x-57845df8427c4718c1dee18cf9460be24e4519e83e1c928ff1e1662440b1a63c.png" alt="four drinks" height="70px" />
+                                        <h3>8 or More Drinks Per Week</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="window.open('https://www.blueprintincome.com/tools/life-expectancy-calculator-how-long-will-i-live/info/alcohol','_blank')">Click here to see our source!</button>
                     </section>
+                    <hr style="margin: 25px;"/>
                     <section>
-                        <h2>You do drugs!</h2>
-                        <h2>It may be too late for you but if you quit you can add up to 4 years to your life!</h2>
-                        <img src="pill.png" alt="pill" />
+                        <h2 id="opioid"></h2>
+                        <h2 id="opioid-info"></h2>
+                        <div class="box">
+                            <div style="position: relative;">
+                                <img src="https://cdn.pixabay.com/photo/2014/03/24/13/42/male-294095_1280.png" id="opioid-img" alt="man" height="300px" />
+                                <h2 class="lifeExpectancy" id="opioid-LE"></h2>
+                            </div>
+                            <div class="chart">
+                                <canvas id="opioid-chart"></canvas>
+                            </div>
+                        </div>
+                        <button onclick="window.open('https://www.cnbc.com/2023/08/03/8-habits-that-may-add-20-years-to-your-life-according-to-a-new-study.html','_blank');">Click here to see our source!</button>
+                        <br/>
+                        <button onclick="window.open('https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/bulletins/deathsrelatedtodrugpoisoninginenglandandwales/2021registrations','_blank');">Click here to see our source!</button>
                     </section>
+                    <hr style="margin: 25px;"/>
                     <section>
-                        <h2>Sleep for longer!</h2>
-                        <h2>A good nights sleep can add up to 4 years to your life!</h2>
-                        <img src="moon.png" alt="moon" />
+                        <h2 id="sleep"></h2>
+                        <h2 id="sleep-info"></h2>
+                        <div class="box">
+                            <div style="position: relative;">
+                                <img src="https://cdn.pixabay.com/photo/2014/03/24/13/42/male-294095_1280.png" id="sleep-img" alt="man" height="300px" />
+                                <h2 class="lifeExpectancy" id="sleep-LE"></h2>
+                            </div>
+                            <div class="chart">
+                                <canvas id="sleep-chart"></canvas>
+                            </div>
+                        </div>
+                        <button onclick="window.open('https://www.acc.org/About-ACC/Press-Releases/2023/02/22/21/35/Getting-Good-Sleep-Could-Add-Years-to-Your-Life','_blank')">Click here to see our source!</button>
+                        <br/>
+                        <button onclick="window.open('https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2727237/','_blank')">Click here to see our source!</button>
                     </section>
+                    <hr style="margin: 25px;"/>
                     <section>
-                        <h2>You have never smoked!</h2>
-                        <h2>You are at much lower risk of lung cancer and couldve already added 5 years to your life!</h2>
-                        <img src="cigarette.png" alt="cigarette" />
+                        <h2 id="smoking"></h2>
+                        <h2 id="smoking-info"></h2>
+                        <div class="box">
+                            <div style="position: relative;">
+                                <img src="https://cdn.pixabay.com/photo/2014/03/24/13/42/male-294095_1280.png" id="smoking-img" alt="man" height="300px" />
+                                <h2 class="lifeExpectancy" id="smoking-LE"></h2>
+                            </div>
+                            <div class="chart">
+                                <table>
+                                    <thead>
+                                        <th></th>
+                                        <th>Never Smoked</th>
+                                        <th>Quit 10+ years</th>
+                                        <th>Quit 1-9 years</th>
+                                        <th>Quit &lt; 1 year</th>
+                                        <th>Still smoke</th>
+                                    </thead>
+                                    <tr>
+                                        <td>No smokes</td>
+                                        <td class="table" style="background-color: green;" value="00"></td>
+                                        <td class="table"></td>
+                                        <td class="table"></td>
+                                        <td class="table"></td>
+                                        <td class="table"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1/2 pack a day</td>
+                                        <td class="table"></td>
+                                        <td class="table" style="background-color: green;" value="11"></td>
+                                        <td class="table" style="background-color: lightgreen;" value="12"></td>
+                                        <td class="table" style="background-color: yellow;" value="13"></td>
+                                        <td class="table" style="background-color: orange;" value="14"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pack a day</td>
+                                        <td class="table"></td>
+                                        <td class="table" style="background-color: lightgreen;" value="21"></td>
+                                        <td class="table" style="background-color: yellow;" value="22"></td>
+                                        <td class="table" style="background-color: orange;" value="23"></td>
+                                        <td class="table" style="background-color: red;" value="24"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2 packs a day</td>
+                                        <td class="table"></td>
+                                        <td class="table" style="background-color: yellow;" value="31"></td>
+                                        <td class="table" style="background-color: orange;" value="32"></td>
+                                        <td class="table" style="background-color: red;" value="33"></td>
+                                        <td class="table" style="background-color: red;" value="34"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <button onclick="window.open('','_blank')">Click here to see our source!</button>
                     </section>
+                    <hr style="margin: 25px;" class="samePage"/>
                     <section>
-                        <button onclick="">Download PDF</button>
+                        <button id="pdfDownload">Download PDF</button>
                         <br/>
                     </section>
                 </div>

@@ -14,6 +14,29 @@ h1, h2, h3, h4, h5, h6 {
     filter: invert(48%) sepia(50%) hue-rotate(78deg) saturate(1000%);
 }
 
+.table {
+    border: 1px solid;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.selected {
+    border: none;
+    box-shadow: inset 0 0 0 4px #000000 !important;
+}
+
+th, td {
+    padding: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: fit-content;
+}
+
 h2 {
     font-size: 22px;
 }
@@ -33,7 +56,19 @@ label {
     border-radius: 10px;
     padding: 10px;
     height: 320px;
-}    
+}
+
+#range {
+    --sliderImg: url("https://emoji.aranja.com/static/emoji-data/img-apple-160/1f476.png");
+}
+
+#range::-webkit-slider-thumb {
+    background-image: var(--sliderImg) !important;
+}
+
+#range::-moz-range-thumb {
+    background-image: var(--sliderImg) !important;
+}
 
 button {
     display: block;
@@ -63,7 +98,7 @@ button:active {
 }
 
 #range-text {
-    width: 180px;
+    width: 190px;
 }
 
 .box {
@@ -72,6 +107,37 @@ button:active {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px
+}
+
+.lifeExpectancy {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#alcohol-chart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 300px;
+}
+
+.selected-alcohol {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    box-shadow: 0px 2px 2px 0px hsla(0, 0%, 0%, 0.14), 0px 4px 2px -2px hsla(0, 0%, 0%, 0.12), 0px 2px 6px 0px hsla(0, 0%, 0%, 0.2);
+}
+
+.alcohol-box {
+    padding: 20px;
+    width: 25%;
+    height: 100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align:center;
 }
 
 .chart {
@@ -83,5 +149,21 @@ button:active {
     .chart {
         width: 90%;
         height: fit-content;
+    }
+}
+
+@media print {
+    .noPrint, nav-bar, range-bar, button {
+        display: none;
+    }
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    hr:not(.samePage) {
+        page-break-after: always;
+    }
+    hr:not(.showPrint) {
+        visibility: hidden;
     }
 }

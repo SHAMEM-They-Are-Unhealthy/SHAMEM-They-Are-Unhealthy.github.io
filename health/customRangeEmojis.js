@@ -43,5 +43,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    window.addEventListener( "pageshow", function ( event ) {
+        var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type == 2);
+        if (historyTraversal) {
+          window.location.reload();
+        }
+      });
+
     preloadImages(["https://emoji.aranja.com/static/emoji-data/img-apple-160/1f600.png", "https://emoji.aranja.com/static/emoji-data/img-apple-160/1f62e.png", "https://emoji.aranja.com/static/emoji-data/img-apple-160/1f635.png", "https://emoji.aranja.com/static/emoji-data/img-apple-160/1f602.png", "https://emoji.aranja.com/static/emoji-data/img-apple-160/1f62d.png", "https://emoji.aranja.com/static/emoji-data/img-apple-160/1f625.png"]);
 });

@@ -7,41 +7,49 @@ class NavBar extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-    <header class="header">
-      <nav class="navbar">
-        <a href="/" class="nav-logo"
-          ><img id="logo-img" style="width: 100px; height: auto"
-        /></a>
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-          <li class="nav-item health-info">
-            <a href="/health-info/" class="nav-link"
-              >Health Info
-              <span class="dropdown-icon">
-                <i class="fa-solid fa-caret-down"></i> </span
-            ></a>
-            <ul class="drop-down">
-              <li><a href="/health/">Health</a></li>
-              <li><a href="/diet/">Diet</a></li>
-              <li><a href="/benefits/">Benefits</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="/workout/" class="nav-link">Workout</a>
-          </li>
-          <li class="nav-item">
-            <a href="/contact/" class="nav-link">Contact</a>
-          </li>
-        </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
-    </header>
-    <div style="height: 55px"></div>
-    `;
+        <header class="header">
+  <nav class="navbar">
+    <a href="/" class="nav-logo"
+      ><img id="logo-img" style="width: 100px; height: auto"
+    /></a>
+    <ul class="nav-menu">
+      <a href="/" class="nav-link">
+        <li class="nav-item">Home</li>
+      </a>
+      <a href="/health-info/" class="nav-link">
+        <li class="nav-item health-info">
+          Health Info
+          <span class="dropdown-icon">
+            <i class="fa-solid fa-caret-down"></i>
+          </span>
+          <ul class="drop-down" style="text-align: left;">
+            <a href="/health/">
+              <li>Health</li>
+            </a>
+            <a href="/diet/">
+              <li>Diet</li>
+            </a>
+            <a href="/benefits/">
+              <li>Benefits</li>
+            </a>
+          </ul>
+        </li>
+      </a>
+      <a href="/workout/" class="nav-link">
+        <li class="nav-item">Workout</li>
+      </a>
+      <a href="/contact/" class="nav-link">
+        <li class="nav-item">Contact</li>
+      </a>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+</header>
+<div style="height: 55px"></div>`;
   }
 }
 
