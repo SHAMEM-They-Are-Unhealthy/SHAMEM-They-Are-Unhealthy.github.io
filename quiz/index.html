@@ -13,9 +13,35 @@
     ></script>
   </head>
   <body>
+    <nav-bar></nav-bar>
     <div class="center">
       <div class="login-container">
-        <h1>Login</h1>
+        <div class="login-logo">
+          <img id="logo-img" style="width: 100px; height: auto" />
+        </div>
+        <div class="head-text">
+          <h1>Log in</h1>
+          <div class="head-p">
+            <p class="login-p">Don't have an account?</p>
+            <a class="sign-up" href=""Sign up </a>
+          </div>
+        </div>
+        <div class="form-container">
+          <form action="">
+            <div class="email field">
+              <label for="email">Email</label>
+              <input type="email" id="email" />
+            </div>
+            <div class="password field">
+              <label for="password">Password</label>
+              <input type="password" id="password" />
+            </div>
+            <div class="form-control">
+              <p class="alert"></p>
+              <button type="submit" class="submit-btn">Log In</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </body>
