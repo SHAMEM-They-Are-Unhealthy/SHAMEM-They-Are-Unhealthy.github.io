@@ -22,13 +22,13 @@ class NavBar extends HTMLElement {
                     <i class="fa-solid fa-caret-down"></i>
                 </span>
                 <ul class="drop-down" style="text-align: left;">
-                    <a href="/health/">
+                    <a href="/health/" class="nav-link">
                         <li class="nav-item">Health</li>
                     </a>
-                    <a href="/diet/">
+                    <a href="/diet/" class="nav-link">
                         <li class="nav-item">Diet</li>
                     </a>
-                    <a href="/benefits/">
+                    <a href="/benefits/" class="nav-link">
                         <li class="nav-item">Benefits</li>
                     </a>
                 </ul>

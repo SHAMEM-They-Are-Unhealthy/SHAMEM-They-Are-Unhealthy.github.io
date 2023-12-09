@@ -13,13 +13,10 @@ function articlescall(){
     }).then(data => {
         var count = data.articles.length;
         localStorage.setItem('count', count);
-        console.log(data);
         for (let i = 0; i < count; i++) {
             liTitle.push(data.articles[i].title);
             liURL.push(data.articles[i].url);
         }
-        console.log(liTitle);
-        console.log(liURL);
         localStorage.setItem("liTitle", JSON.stringify(liTitle));
         localStorage.setItem("liURL", JSON.stringify(liURL));
     }).catch(error => {
@@ -32,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
     articlescall();
     var title = localStorage.getItem("liTitle");
     var link = localStorage.getItem("liURL");
-    console.log(title);
     const liTitle = JSON.parse(title);
     const liURL = JSON.parse(link);
     var count = localStorage.getItem('count');
