@@ -1,6 +1,6 @@
-html {
+/* html {
   height: 100%;
-}
+} */
 
 body {
   height: 90vh;
@@ -66,7 +66,7 @@ body {
 }
 
 .ready-title {
-  font-size: calc(3vw + 2vh + 1vmin);
+  font-size: calc(1vw + 2vh + 1vmin);
 }
 
 .ready-container {
@@ -78,7 +78,7 @@ body {
 }
 
 .ready-btn {
-  margin-top: 20%;
+  margin-top: 100%;
   font-size: calc(1vw + 1vh + 1vmin);
   min-width: calc(7vh + 5vw);
   min-height: calc(3vh + 2vw);
@@ -89,20 +89,48 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   cursor: pointer;
 }
+
 .ready-btn:hover {
   background-color: rgb(22, 165, 0);
-}
-
-.ready-container h2 {
-  margin-top: 20%;
-  font-size: calc(3vw + 1vh + 1vmin);
 }
 
 .answer:hover {
   background-color: rgb(153, 153, 153);
 }
 
+.interval-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.countdown {
+  margin: 10% 3rem 0 3rem;
+  font-size: calc(2vw + 2vh + 1vmin);
+  padding: 1rem;
+  background-color: #128300;
+  color: white;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.interval-container h2 {
+  margin-top: 10%;
+  padding: 3rem 1rem;
+  font-size: calc(2vw + 2vh + 1vmin);
+}
+
+.you-answered {
+  padding: 3rem 1rem;
+  font-size: calc(2vw + 2vh + 1vmin);
+  background-color: rgb(209, 209, 209);
+}
+
 @media all and (max-width: 780px) {
+  .countdown {
+    margin: 30% 3rem 0 3rem;
+    font-size: calc(3vw + 2vh + 1vmin);
+  }
   .answer {
     flex: 1 1 80%;
     margin: 1rem;

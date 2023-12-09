@@ -88,7 +88,7 @@ window.addEventListener("DOMContentLoaded", () => {
   let answers;
   let timer;
   let readyBtn;
-  let i;
+  let answerDataArray = [];
 
   function displayReady() {
     center.innerHTML = `
@@ -96,7 +96,6 @@ window.addEventListener("DOMContentLoaded", () => {
       <h1 class="ready-title">
         There are ${quizQuestions.length} questions in this quiz.
       </h1>
-      <h2>Are you ready?</h2>
       <div class="btn-container">
         <button class="ready-btn">Start Quiz</button>
       </div>
@@ -104,7 +103,6 @@ window.addEventListener("DOMContentLoaded", () => {
     `;
     readyBtn = document.querySelector(".ready-btn");
     readyBtn.addEventListener("click", displayNextQuestion);
-    // readyBtn.addEventListener("click", );
   }
 
   displayReady();
@@ -112,18 +110,48 @@ window.addEventListener("DOMContentLoaded", () => {
   function displayTimer(timer) {
     let i = 0;
     function timerPlusOne() {
-      timer.innerHTML = i;
+      timer.innerHTML = `${i}s`;
       i++;
     }
     timerPlusOne();
     setInterval(timerPlusOne, 1000);
   }
 
+  function displayCountdown() {
+    const youAnswered = document.querySelector(".you-answered");
+    const countdownNumber = document.querySelector(".countdown-number");
+    let i = 3;
+    function timerMinusOne() {
+      countdownNumber.innerHTML = `${i}s.`;
+      youAnswered.innerHTML;
+      i--;
+      if (i < 0) {
+        clearInterval(countdown);
+      }
+    }
+    timerMinusOne();
+    const countdown = setInterval(timerMinusOne, 1000);
+  }
+
+  function displayInterval(questionNumber) {
+    const answerKey = answerDataArray[questionNumber - 1].answer;
+    const yourAnswer = quizQuestions[questionNumber - 1][answerKey];
+    center.innerHTML = `
+      <div class="interval-container">
+        <h1 class="countdown">Next Question in <span class="countdown-number"></span></h1>
+        <h2 class="">You answered :</h2>
+        <h3 class="you-answered">${yourAnswer}</h3>
+      </div>
+    `;
+    displayCountdown();
+  }
+
   function displayNextQuestion() {
+    let questionNumber = quizQuestions[counter].questionNumber;
     let questionHTML = `<div class="header-container">
-        <h1 class="question-number">Question ${quizQuestions[counter].questionNumber}/10</h1>
+        <h1 class="question-number">Question ${questionNumber}/10</h1>
         <div class="timer">
-        <h2 class="timer-number"></h2>
+          <h2 class="timer-number"></h2>
         </div>
       </div>
       <div class="question-title">
@@ -146,16 +174,30 @@ window.addEventListener("DOMContentLoaded", () => {
     center.innerHTML = questionHTML;
     answers = document.querySelectorAll(".answer");
     timer = document.querySelector(".timer-number");
+    const startTime = Date.now();
     if (counter < quizQuestions.length) {
       displayTimer(timer);
     }
     answers.forEach(function (answer) {
       answer.addEventListener("click", function (e) {
         const option = e.currentTarget.classList[1];
-        console.log(option);
+        const endTime = Date.now();
+        const timeTaken = endTime - startTime;
+
+        function answerData(number, answer, time) {
+          this.questionNumber = number;
+          this.answer = answer;
+          this.time = time;
+        }
+
+        let answerObj = new answerData(questionNumber, option, timeTaken);
+        console.log(answerObj);
+        answerDataArray.push(answerObj);
+        console.log(answerDataArray);
+
         if (counter < quizQuestions.length) {
-          // displayInterval();
-          displayNextQuestion(quizQuestions);
+          displayInterval(questionNumber);
+          setTimeout(displayNextQuestion, 3000);
         } else {
           displayResults();
         }
@@ -163,7 +205,6 @@ window.addEventListener("DOMContentLoaded", () => {
     });
     counter++;
   }
-
   function displayResults() {
     center.innerHTML = `<h1>finished</h1>`;
   }
