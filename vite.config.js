@@ -13,7 +13,9 @@ export default {
                 results: resolve(__dirname, 'health/results/index.html'),
                 workout: resolve(__dirname, 'workout/index.html'),
                 login: resolve(__dirname, 'quiz/login/index.html'),
-                register: resolve(__dirname, 'quiz/register/index.html')
+                register: resolve(__dirname, 'quiz/register/index.html'),
+                quiz: resolve(__dirname, 'quiz/index.html'),
+                error: resolve(__dirname, '404.html')
             }
         }
     }
