@@ -1,20 +1,20 @@
 {
-  "name": "shamem-they-are-unhealthy-github-io",
-  "private": true,
-  "version": "0.0.0",
-  "homepage": "SHAMEM-They-Are-Unhealthy/SHAMEM-They-Are-Unhealthy.github.io",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "predeploy": "npm run build && git add dist -f && git commit -m \"Adding dist\"",
-    "deploy": "git subtree push --prefix dist origin gh-pages",
-    "preview": "npm run build && vite preview"
-  },
-  "devDependencies": {
-    "vite": "^5.0.0"
-  },
-  "dependencies": {
-    "jspdf": "^2.5.1"
-  }
+    "name": "shamem-they-are-unhealthy-github-io",
+    "private": true,
+    "version": "0.0.0",
+    "homepage": "SHAMEM-They-Are-Unhealthy/SHAMEM-They-Are-Unhealthy.github.io",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "predeploy": "npm run build && git add dist -f && git commit -m \"Adding dist\"",
+        "deploy": "git subtree push --prefix dist origin gh-pages",
+        "preview": "npm run build && vite preview"
+    },
+    "devDependencies": {
+        "vite": "^5.0.0"
+    },
+    "dependencies": {
+        "jspdf": "^2.5.1"
+    }
 }
