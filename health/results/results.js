@@ -152,9 +152,9 @@ document.addEventListener("DOMContentLoaded", function() {
         /********************************************************************************************************************************************************/
 
         document.getElementById("alcohol-zero-text").innerHTML = Math.round(lifeExpectancy * 10) / 10;
-        document.getElementById("alcohol-two-text").innerHTML = Math.round(lifeExpectancy * 10) / 10 + 2.3;
-        document.getElementById("alcohol-seven-text").innerHTML = Math.round(lifeExpectancy * 10) / 10 + 3.1;
-        document.getElementById("alcohol-eight-text").innerHTML = Math.round(lifeExpectancy * 10) / 10 + 1.8;
+        document.getElementById("alcohol-two-text").innerHTML = Math.round((lifeExpectancy + 2.3) * 10) / 10;
+        document.getElementById("alcohol-seven-text").innerHTML = Math.round((lifeExpectancy + 3.1) * 10) / 10;
+        document.getElementById("alcohol-eight-text").innerHTML = Math.round((lifeExpectancy + 1.8) * 10) / 10;
         switch (alcohol) {
             case 0:
                 document.getElementById("alcohol").innerHTML = "You Never Drink";

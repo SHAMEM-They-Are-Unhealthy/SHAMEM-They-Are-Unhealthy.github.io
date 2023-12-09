@@ -12,7 +12,6 @@ body {
 
 .main {
     margin: 20px 60px;
-    margin-right: 0px;
     float: left;
     width: 50%;
     max-width: 100%;
@@ -21,6 +20,7 @@ body {
   
 .right {
     margin: 20px 60px;
+    margin-left: 0px;
     float: left;
     width: calc(50% - 180px);
 }
@@ -65,7 +65,8 @@ body {
 
 @media screen and (max-width: 1000px) {
     .main, .right {
-        width: 100%;
+        margin: 3px;
+        width: calc(100% - 6px);
         padding: 20px 40px;
     }
 }
