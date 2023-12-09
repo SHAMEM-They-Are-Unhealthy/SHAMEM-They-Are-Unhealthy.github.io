@@ -36,18 +36,18 @@ div{
     border-radius: 10px;
     padding: 10px 10px;
 } */
-.photo{
-   /* height: 50%;
+ /* .photo{
+    height: 50%;
    width: 50%;
    display:flex;
    margin-left: auto;
-   margin-right: auto;  */
-   width: 500px;
+   margin-right: auto;  
+    width: 500px;
     height: 500px;
     border-radius: 8px;
    
-}
-.title{
+} */
+/* .title{
     text-align: center;
     font-size: 2rem;
 }
@@ -58,10 +58,24 @@ div{
     text-align: center;
 }
 .bullet{
+    text-align: center; */
+.title{
     text-align: center;
+    padding-top: 3rem;
+    padding: 5rem 2rem;
+}
 
+.title >h1{
+    font-size: 5rem;
+    font-weight: 900;
+    padding-bottom: 2rem;
+}   
+.title > h2{
+    font-size: 2.5rem;
+    padding: 1rem;
     
 }
+
 section{
     padding-top: 10px;
     padding-bottom: 20px;
@@ -71,6 +85,7 @@ section{
     margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
+   
 }
 article{
     display:block;
@@ -81,4 +96,33 @@ article{
     box-sizing: border-box;
     border: 2px solid black;
     box-shadow: 10px 5px 5px darkslategray;
-}
+} 
+
+.service {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .service img {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .service-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 2rem;
+  }
+  
+  .bullet {
+    font-size: 2rem;
+
+  }

@@ -68,18 +68,18 @@ class Index{
         this.bullet4 = bullet4;
     }
 }
-const index1 = new Index(1,"Exercise Goals","goals.jpg","NA", "Older adults should do some type of physical activity every day to help improve health and reduce risk of heart disease and stroke", "Adults aged 65 and over should:","Aim to be physically active everyday, even if it is just light activity", "Do activities that improve strength, balance and flexibility at least 2 days a week","Do at least 150 minutes of moderate intensity activity a week","Reduce time spent sitting or lying down" );
-const index2 = new Index(2,"Light Activity","light.jpg","Elderly couple walking on a path", "Light activity is moving rather than sitting or lying down", "Examples of light activity include:","Getting up to make a cup of tea", "Move around your home","Walking at a slow pace","Cleaning and Dusting"  );
-const index3 = new Index(3,"Moderate intensity acitvity", "moderate.jpg","Dance for fitness class","Moderate intensity activity will raise raise your heart rate, make you breathe faster and feel warmer. You should be able to talk, but not sing", "Examples of moderate activity include:", "Walking for health", "Pushing a lawnmower", "Doubles Tennis" , "Dance for fitness" );
-const index4 = new Index(4,"Vigorous intensity activity","vigerous.jpg","Couple jogging", "Vigorous activity makes you breathe hard and fast. In general, 75 minutes out vigorous intensity activity can give similar health benefots to 150 minutes of moderate intensity activity", "Examples of vigorous activities include:", "Running", "Aerobics", "Singles Tennis", "Dance for fitness" );
-const index5 = new Index(5,"Muscle Strengthening Activity","muscle.jpg","Two people swingning kettlebells", "Strengthing muscles can be done at home or in the gym, you should do them to the point where you need a short rest before repeating the activity","Examples of Muscle-strengthening activities include:", "Carrying heavy shopping bags", "Heavy gardening (Digging)", "Lifting weights", "Yoga");
+
+const index1 = new Index(1,"Light Activity","light.jpg","Elderly couple walking on a path", "Light activity is moving rather than sitting or lying down", "Examples of light activity include:","Getting up to make a cup of tea", "Move around your home","Walking at a slow pace","Cleaning and Dusting"  );
+const index2 = new Index(2,"Moderate intensity acitvity", "moderate.jpg","Dance for fitness class","Moderate intensity activity will raise raise your heart rate, make you breathe faster and feel warmer. You should be able to talk, but not sing", "Examples of moderate activity include:", "Walking for health", "Pushing a lawnmower", "Doubles Tennis" , "Dance for fitness" );
+const index3 = new Index(3,"Vigorous intensity activity","vigerous.jpg","Couple jogging", "Vigorous activity makes you breathe hard and fast. In general, 75 minutes out vigorous intensity activity can give similar health benefots to 150 minutes of moderate intensity activity", "Examples of vigorous activities include:", "Running", "Aerobics", "Singles Tennis", "Dance for fitness" );
+const index4 = new Index(4,"Muscle Strengthening Activity","muscle.jpg","Two people swingning kettlebells", "Strengthing muscles can be done at home or in the gym, you should do them to the point where you need a short rest before repeating the activity","Examples of Muscle-strengthening activities include:", "Carrying heavy shopping bags", "Heavy gardening (Digging)", "Lifting weights", "Yoga");
 
 const index = [];
 index.push(index1);
 index.push(index2);
 index.push(index3);
 index.push(index4);
-index.push(index5);
+
 
 console.log(index.length);
 
@@ -89,15 +89,19 @@ function loadContent(){
         return`
         <article class="service">
             <h1 class="title">${item.title}</h1>
-            <img src=${item.img}  class="photo"/>
-            <h2 class="desc"><b>${item.desc}</b></h2>
-            <h2 class="introBullet">${item.introBullet}</h2>
-            <ul>
-                 <li class="bullet">${item.bullet1}</li>
-                 <li class="bullet">${item.bullet2}</li>
-                 <li class="bullet">${item.bullet3}</li>
-                 <li class="bullet">${item.bullet4}</li>
-             </ul>
+            <div class="row">
+                <img src=${item.img}  class="photo"/>
+                <div class="service-text">
+                    <h2 class="desc"><b>${item.desc}</b></h2>
+                    <h2 class="introBullet">${item.introBullet}</h2>
+                    <ul>
+                        <li class="bullet">${item.bullet1}</li>
+                        <li class="bullet">${item.bullet2}</li>
+                        <li class="bullet">${item.bullet3}</li>
+                        <li class="bullet">${item.bullet4}</li>
+                    </ul>
+                </div>
+            </div>
         </article>
   
         `;
@@ -109,3 +113,17 @@ function loadContent(){
 };
 
 window.addEventListener("DOMContentLoaded", loadContent, false);
+
+
+// <article class="service">
+// <h1 class="title">${item.title}</h1>
+// <img src=${item.img}  class="photo"/>
+// <h2 class="desc"><b>${item.desc}</b></h2>
+// <h2 class="introBullet">${item.introBullet}</h2>
+// <ul>
+//      <li class="bullet">${item.bullet1}</li>
+//      <li class="bullet">${item.bullet2}</li>
+//      <li class="bullet">${item.bullet3}</li>
+//      <li class="bullet">${item.bullet4}</li>
+//  </ul>
+// </article>
