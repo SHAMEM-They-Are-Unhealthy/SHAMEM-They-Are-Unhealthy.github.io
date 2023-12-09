@@ -1,12 +1,4 @@
-import "./nav.css";
-
-class NavBar extends HTMLElement {
-    constructor() {
-        super();
-    }
-
-    connectedCallback() {
-        this.innerHTML = `
+(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))n(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const l of t.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&n(l)}).observe(document,{childList:!0,subtree:!0});function i(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function n(e){if(e.ep)return;e.ep=!0;const t=i(e);fetch(e.href,t)}})();class r extends HTMLElement{constructor(){super()}connectedCallback(){this.innerHTML=`
 <header class="header">
     <nav class="navbar">
         <a href="/" class="nav-logo">
@@ -48,27 +40,4 @@ class NavBar extends HTMLElement {
         </div>
     </nav>
 </header>
-<div style="height: 55px"></div>`;
-    }
-}
-
-customElements.define("nav-bar", NavBar);
-
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-    const navLink = document.querySelectorAll(".nav-link");
-
-    hamburger.addEventListener("click", mobileMenu);
-    navLink.forEach((n) => n.addEventListener("click", closeMenu));
-
-    function mobileMenu() {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-    }
-
-    function closeMenu() {
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
-    }
-});
+<div style="height: 55px"></div>`}}customElements.define("nav-bar",r);document.addEventListener("DOMContentLoaded",function(){const a=document.querySelector(".hamburger"),s=document.querySelector(".nav-menu"),i=document.querySelectorAll(".nav-link");a.addEventListener("click",n),i.forEach(t=>t.addEventListener("click",e));function n(){a.classList.toggle("active"),s.classList.toggle("active")}function e(){a.classList.remove("active"),s.classList.remove("active")}});

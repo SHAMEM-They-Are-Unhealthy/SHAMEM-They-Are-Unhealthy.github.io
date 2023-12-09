@@ -150,6 +150,20 @@ button:active {
         width: 90%;
         height: fit-content;
     }
+    .alcohol-box {
+        width: 50%;
+        height: 50%;
+    }
+    .alcohol-chart-parent, #alcohol-chart {
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .alcohol-box > img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media print {
@@ -165,5 +179,9 @@ button:active {
     }
     hr:not(.showPrint) {
         visibility: hidden;
+    }
+    .chart {
+        height: 300px;
+        width: 600px;
     }
 }
