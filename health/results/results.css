@@ -166,4 +166,8 @@ button:active {
     hr:not(.showPrint) {
         visibility: hidden;
     }
+    .chart {
+        height: 300px;
+        width: 600px;
+    }
 }
