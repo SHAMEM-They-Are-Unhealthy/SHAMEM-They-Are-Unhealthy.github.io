@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("http://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 
 * {
   margin: 0;
@@ -144,9 +144,6 @@ h6 {
 .nav-menu a {
   display: block;
   font-weight: 600;
-}
-
-.nav-menu li {
 }
 
 .nav-link {
