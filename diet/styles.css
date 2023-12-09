@@ -64,10 +64,6 @@
     .div-center{
         grid-template: auto / auto auto ;
     }
-    /* .info-container{
-        max-width: 60%;
-        min-width: 350px;
-    } */
 }
 
 @media screen and (max-width:900px){
