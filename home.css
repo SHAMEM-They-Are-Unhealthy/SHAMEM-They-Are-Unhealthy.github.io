@@ -8,20 +8,21 @@ body {
     text-align: center;
     font-size: 2rem;
     content: justify;
- }
+}
 
 .main {
-    padding: 20px 120px;
+    margin: 20px 60px;
+    margin-right: 0px;
     float: left;
-    width: 65%;
+    width: 50%;
     max-width: 100%;
     height: auto;
 }
   
 .right {
-    padding: 20px;
+    margin: 20px 60px;
     float: left;
-    width: 35%;
+    width: calc(50% - 180px);
 }
 
 #mainhead {
