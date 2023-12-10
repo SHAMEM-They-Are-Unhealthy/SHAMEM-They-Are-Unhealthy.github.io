@@ -207,5 +207,6 @@ window.addEventListener("DOMContentLoaded", () => {
   }
   function displayResults() {
     center.innerHTML = `<h1>finished</h1>`;
+    answerDataArray;
   }
 });

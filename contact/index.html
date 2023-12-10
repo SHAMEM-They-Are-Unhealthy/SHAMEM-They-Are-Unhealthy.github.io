@@ -1,75 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="https://kit.fontawesome.com/9fcbeb9d9c.js" crossorigin="anonymous"></script>
-        <script src="/components/NavBar.js" type="module"></script>
-        <script src="/contact/contact.js" type="module"></script>
-        <title>SHAMEM</title>
-        <link rel="stylesheet" href="/contact/contact.css" />
-    </head>
-    <body>
-        <nav-bar></nav-bar>
-        <div class="div-center">
-            <div class="heading">
-                <h2>Contact Us</h2>
-                <p class="why-contact">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam minima ab
-                    architecto harum sunt quasi esse dolores dolor delectus tempore.
-                </p>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/9fcbeb9d9c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/components/NavBar.js" type="module"></script>
+    <script src="/contact/contact.js" type="module"></script>
+    <title>SHAMEM</title>
+    <link rel="stylesheet" href="/contact/contact.css" />
+  </head>
+  <body>
+    <nav-bar></nav-bar>
+    <div class="div-center">
+      <div class="heading">
+        <h2>Contact Us</h2>
+        <p class="why-contact">
+          Use this page to ask the SHAMEM team any questions you may have. We
+          aim to reply to all enquirys within the same working day.
+        </p>
+      </div>
+      <form class="contact-form">
+        <div class="container">
+          <div class="input-column">
+            <div class="fname field">
+              <label for="fname"
+                >First Name<span style="color: red">*</span></label
+              >
+              <input type="text" id="fname" />
             </div>
-            <form class="contact-form">
-                <div class="container">
-                    <div class="input-column">
-                        <div class="fname field">
-                            <label for="fname"
-                                >First Name<span style="color: red">*</span></label
-                            >
-                            <input type="text" id="fname" />
-                        </div>
-                        <div class="lname field">
-                            <label for="lname">Last Name</label>
-                            <input type="text" id="lname" />
-                        </div>
-                        <div class="email field">
-                            <label for="email">Email<span style="color: red">*</span></label>
-                            <input type="email" id="email" />
-                        </div>
-                        <div class="subject-form field">
-                            <label for="subject"
-                                >Subject<span style="color: red">*</span></label
-                            >
-                            <select name="" id="subject">
-                                <option value="">Select Subject</option>
-                                <option value="Diet">Diet</option>
-                                <option value="Fitness">Fitness</option>
-                                <option value="Health">Health</option>
-                                <option value="Benefits">Benefits</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="input-column">
-                        <div class="enquiry-form field">
-                            <label for="enquiry"
-                                >Enquiry<span style="color: red">*</span></label
-                            >
-                            <textarea
-                                rows="5"
-                                cols="33"
-                                id="enquiry"
-                                placeholder="How can we help you?"
-                            ></textarea>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-control">
-                    <p class="alert"></p>
-                    <button type="submit" class="submit-btn">Submit</button>
-                </div>
-            </form>
+            <div class="lname field">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" />
+            </div>
+            <div class="email field">
+              <label for="email">Email<span style="color: red">*</span></label>
+              <input type="email" id="email" />
+            </div>
+            <div class="subject-form field">
+              <label for="subject"
+                >Subject<span style="color: red">*</span></label
+              >
+              <select name="" id="subject">
+                <option value="">Select Subject</option>
+                <option value="Diet">Diet</option>
+                <option value="Fitness">Fitness</option>
+                <option value="Health">Health</option>
+                <option value="Benefits">Benefits</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="input-column">
+            <div class="enquiry-form field">
+              <label for="enquiry"
+                >Enquiry<span style="color: red">*</span></label
+              >
+              <textarea
+                rows="5"
+                cols="33"
+                id="enquiry"
+                placeholder="How can we help you?"
+              ></textarea>
+            </div>
+          </div>
         </div>
-    </body>
+        <div class="form-control">
+          <p class="alert"></p>
+          <button type="submit" class="submit-btn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
