@@ -63,10 +63,44 @@ body {
     padding: 20px 20px;
 }
 
+#cta {
+    padding: 20px 0px;
+}
+
+#ctahead{
+    padding: 20px 40px;
+}
+
+.tilelinks{
+    text-decoration: none;
+    color: black;
+}
+
+#tiles{
+    font-size: 1.5rem;
+}
+
+.tile{
+    float: left;
+    width: 49%;
+    background-color: #CAF1FF;
+    padding: 20px 40px;
+    margin: 0.25%;
+    height: auto;
+}
+
+.tile:hover{
+    background-color: aliceblue;
+}
+
 @media screen and (max-width: 1000px) {
-    .main, .right {
+    .main, .right, .tile {
         margin: 3px;
         width: calc(100% - 6px);
         padding: 20px 40px;
+        height: auto;
+    }
+    #cta{
+        padding: 20px 0px;
     }
 }
