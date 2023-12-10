@@ -134,11 +134,18 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function displayInterval(questionNumber) {
+    console.log(counter);
+    let intervalText;
+    if (counter < 10) {
+      intervalText = "Next Question in ";
+    } else {
+      intervalText = "Ending quiz in ";
+    }
     const answerKey = answerDataArray[questionNumber - 1].answer;
     const yourAnswer = quizQuestions[questionNumber - 1][answerKey];
     center.innerHTML = `
       <div class="interval-container">
-        <h1 class="countdown">Next Question in <span class="countdown-number"></span></h1>
+        <h1 class="countdown">${intervalText}<span class="countdown-number"></span></h1>
         <h2 class="">You answered :</h2>
         <h3 class="you-answered">${yourAnswer}</h3>
       </div>
@@ -199,14 +206,17 @@ window.addEventListener("DOMContentLoaded", () => {
           displayInterval(questionNumber);
           setTimeout(displayNextQuestion, 3000);
         } else {
-          displayResults();
+          displayInterval(questionNumber);
+          setTimeout(displayResults, 3000);
         }
       });
     });
     counter++;
   }
   function displayResults() {
-    center.innerHTML = `<h1>finished</h1>`;
-    answerDataArray;
+    let url = window.location.origin;
+    console.log(url);
+    url = url + "/quiz/leaderBoard/";
+    window.location.replace(url);
   }
 });
