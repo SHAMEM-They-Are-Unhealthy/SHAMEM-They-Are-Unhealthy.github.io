@@ -224,4 +224,8 @@ button:active {
     .attributes {
         margin: 10px auto;
     }
+
+    label {
+        font-size: 16px;
+    }
 }
