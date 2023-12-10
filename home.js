@@ -34,6 +34,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var count = localStorage.getItem('count');
 
     for(let i = 0; i < count; i++){
-        document.getElementById('articles').innerHTML += `<div class="articles" onclick="window.open('${liURL[i]}', '_blank')"><br><p>${liTitle[i]}</p><br></div><hr>`;
+        document.getElementById('articles').innerHTML += `<div class="articles" onclick="window.open('${liURL[i]}', '_blank')"><br/><p>${liTitle[i]}</p><br/></div><hr/>`;
     }
 });

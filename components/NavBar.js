@@ -10,36 +10,41 @@ class NavBar extends HTMLElement {
 <header class="header">
     <nav class="navbar">
         <a href="/" class="nav-logo">
-            <img id="logo-img" style="width: 100px; height: auto"/>
+            <img alt="logo" src="https://github.com/SHAMEM-They-Are-Unhealthy/SHAMEM-They-Are-Unhealthy.github.io/blob/main/public/SRF.png?raw=true" id="logo-img" style="width: 100px; height: auto;" />
         </a>
         <ul class="nav-menu">
-            <a href="/" class="nav-link">
-                <li class="nav-item">Home</li>
-            </a>
+            <li>
+                <a href="/" class="nav-link">
+                    <p class="nav-item">Home</p>
+                </a>
+            </li>
             <li class="nav-item health-info">
                 Health Info
                 <span class="dropdown-icon">
                     <i class="fa-solid fa-caret-down"></i>
                 </span>
                 <ul class="drop-down" style="text-align: left;">
-                    <a href="/diet/" class="nav-link" style="font-weight: 400;">
-                        <li>Diet</li>
-                    </a>
-                    <a href="/benefits/" class="nav-link" style="font-weight: 400;">
-                        <li>Benefits</li>
-                    </a>
-                    <a href="/health/" class="nav-link" style="font-weight: 400;">
-                        <li>Health</li>
-                    </a>
+                    <li>
+                        <a href="/diet/" class="nav-link" style="font-weight: 400;">Diet</a>
+                    </li>
+                    <li>
+                        <a href="/benefits/" class="nav-link" style="font-weight: 400;">Benefits</a>
+                    </li>
+                    <li>
+                        <a href="/health/" class="nav-link" style="font-weight: 400;">Health</a>
+                    </li>
                 </ul>
             </li>
-            </a>
-            <a href="/workout/" class="nav-link">
-                <li class="nav-item">Workout</li>
-            </a>
-            <a href="/contact/" class="nav-link">
-                <li class="nav-item">Contact</li>
-            </a>
+            <li>
+                <a href="/workout/" class="nav-link">
+                    <p class="nav-item">Workout</p>
+                </a>
+            </li>
+            <li>
+                <a href="/contact/" class="nav-link">
+                    <p class="nav-item">Contact</p>
+                </a>
+            </li>
         </ul>
         <div class="hamburger">
             <span class="bar"></span>
