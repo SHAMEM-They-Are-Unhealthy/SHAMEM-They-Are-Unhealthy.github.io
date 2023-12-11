@@ -216,7 +216,7 @@ window.addEventListener("DOMContentLoaded", () => {
   function displayResults() {
     let url = window.location.origin;
     console.log(url);
-    url = url + "/quiz/leaderBoard/";
+    url = url + "/quiz/summary/";
     window.location.replace(url);
   }
 });
