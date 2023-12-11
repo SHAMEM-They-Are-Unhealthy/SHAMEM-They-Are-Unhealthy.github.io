@@ -6,6 +6,8 @@ const quizQuestions = [
     answer2: "Blue",
     answer3: "Yellow",
     answer4: "red",
+    answer: "answer2",
+    correctAnswer: "answer2",
     correct: true,
     score: 400,
   },
@@ -16,6 +18,8 @@ const quizQuestions = [
     answer2: "Blue",
     answer3: "Yellow",
     answer4: "red",
+    answer: "answer1",
+    correctAnswer: "answer2",
     correct: false,
     score: 0,
   },
@@ -26,6 +30,8 @@ const quizQuestions = [
     answer2: "Blue",
     answer3: "asvavasasvasavsaassvsav safsaf saf sa",
     answer4: "red",
+    answer: "answer3",
+    correctAnswer: "answer1",
     correct: false,
     score: 0,
   },
@@ -36,6 +42,8 @@ const quizQuestions = [
     answer2: "Blue",
     answer3: "Yellow",
     answer4: "red",
+    answer: "answer1",
+    correctAnswer: "answer1",
     correct: true,
     score: 586,
   },
@@ -46,6 +54,8 @@ const quizQuestions = [
     answer2: "Blue",
     answer3: "Yellow",
     answer4: "red",
+    answer: "answer3",
+    correctAnswer: "answer3",
     correct: true,
     score: 700,
   },
@@ -56,6 +66,8 @@ const quizQuestions = [
     answer2: "Blue",
     answer3: "Yellow",
     answer4: "red",
+    answer: "answer2",
+    correctAnswer: "answer4",
     correct: false,
     score: 0,
   },
@@ -66,6 +78,8 @@ const quizQuestions = [
     answer2: "Blue",
     answer3: "Yellow",
     answer4: "red",
+    answer: "answer3",
+    correctAnswer: "answer3",
     correct: true,
     score: 110,
   },
@@ -76,6 +90,8 @@ const quizQuestions = [
     answer2: "Blue",
     answer3: "Yellow",
     answer4: "red",
+    answer: "answer1",
+    correctAnswer: "answer2",
     correct: false,
     score: 0,
   },
@@ -86,6 +102,8 @@ const quizQuestions = [
     answer2: "Blue",
     answer3: "Yellow",
     answer4: "red",
+    answer: "answer4",
+    correctAnswer: "answer4",
     correct: true,
     score: 76,
   },
@@ -96,6 +114,8 @@ const quizQuestions = [
     answer2: "Blue",
     answer3: "Yellow",
     answer4: "red",
+    answer: "answer1",
+    correctAnswer: "answer1",
     correct: true,
     score: 675,
   },
@@ -127,6 +147,41 @@ window.addEventListener("DOMContentLoaded", () => {
     summaryHTML.join("");
     center.innerHTML = summaryHTML;
   }
+  function addCorrectBorder(items) {
+    const summaryItems = document.querySelectorAll(".summary-item");
+    for (let i = 0; i < items.length; i++) {
+      if (items[i].correct) {
+        summaryItems[i].classList.add("outline-color-green");
+      } else {
+        summaryItems[i].classList.add("outline-color-red");
+      }
+    }
+  }
+
+  function addYourAnswer(items) {
+    let yourAnswer;
+    let yourAnswerBackground;
+    for (let i = 0; i < items.length; i++) {
+      yourAnswer = items[i].answer;
+      yourAnswer = "." + yourAnswer;
+      yourAnswerBackground = document.querySelectorAll(yourAnswer);
+      yourAnswerBackground[i].classList.add("yours");
+    }
+  }
+
+  function addCorrectAnswer(items) {
+    let correctAnswer;
+    let correctAnswerBackground;
+    for (let i = 0; i < items.length; i++) {
+      correctAnswer = items[i].correctAnswer;
+      correctAnswer = "." + correctAnswer;
+      correctAnswerBackground = document.querySelectorAll(correctAnswer);
+      correctAnswerBackground[i].classList.add("correct");
+    }
+  }
 
   displaySummaryItems(quizQuestions);
+  addCorrectBorder(quizQuestions);
+  addCorrectAnswer(quizQuestions);
+  addYourAnswer(quizQuestions);
 });
