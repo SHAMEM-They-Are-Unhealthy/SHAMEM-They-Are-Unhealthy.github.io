@@ -180,8 +180,18 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function displayTotalScore(items) {
+    let totalScore = 0;
+    items.forEach((item) => {
+      totalScore += item.score;
+    });
+    const totalScoreHTML = document.querySelector(".total-score");
+    totalScoreHTML.innerHTML = `Total Score: ${totalScore}`;
+  }
+
   displaySummaryItems(quizQuestions);
   addCorrectBorder(quizQuestions);
   addCorrectAnswer(quizQuestions);
   addYourAnswer(quizQuestions);
+  displayTotalScore(quizQuestions);
 });

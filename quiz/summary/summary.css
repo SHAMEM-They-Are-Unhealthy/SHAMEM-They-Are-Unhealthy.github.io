@@ -103,6 +103,10 @@
   background-color: #0b5200;
 }
 
+.total-score {
+  font-size: calc(2.5vw + 2.5vh);
+}
+
 @media all and (max-width: 780px) {
   .item {
     width: 95%;
