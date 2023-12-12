@@ -168,18 +168,22 @@ h6 {
   color: black;
   border-radius: 0.5rem;
   font-size: 1.6rem;
-  height: 10rem;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  padding: 1rem 3rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: none;
   text-align: left;
 }
 
+.drop-down a {
+  font-weight: 600 !important;
+  padding: 1.2rem 4rem;
+  border-radius: 5px;
+}
+
 .drop-down a:hover {
-  color: var(--primary-variant);
+  color: var(--primary);
+  background-color: white;
 }
 
 .health-info {
@@ -232,6 +236,7 @@ h6 {
   }
 
   .drop-down {
+    margin-top: 2rem;
     position: relative;
     display: flex;
     box-shadow: none;
@@ -267,6 +272,7 @@ h6 {
 
   .health-info:hover {
     background-color: rgb(231, 231, 231) !important;
+    cursor: default !important;
   }
 
   .drop-down a {
