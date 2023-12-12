@@ -1,123 +1,106 @@
-const quizQuestions = [
+const answerObjArray = [
   {
-    questionNumber: 1,
-    question: "What colour is the sky?",
-    answer1: "Green",
-    answer2: "Blue",
-    answer3: "Yellow",
-    answer4: "red",
-    answer: "answer2",
-    correctAnswer: "answer2",
-    correct: true,
-    score: 400,
-  },
-  {
-    questionNumber: 2,
-    question: "Wsdgsky?",
-    answer1: "meeeeee",
-    answer2: "Blue",
-    answer3: "Yellow",
-    answer4: "red",
-    answer: "answer1",
-    correctAnswer: "answer2",
-    correct: false,
-    score: 0,
-  },
-  {
-    questionNumber: 3,
-    question: "sdgsdgdsge sky?",
-    answer1: "woooooo",
-    answer2: "Blue",
-    answer3: "asvavasasvasavsaassvsav safsaf saf sa",
-    answer4: "red",
-    answer: "answer3",
-    correctAnswer: "answer1",
-    correct: false,
-    score: 0,
-  },
-  {
-    questionNumber: 4,
-    question: "What csdhshtsnmmrm sky?",
-    answer1: "hiiiiiiii",
-    answer2: "Blue",
-    answer3: "Yellow",
-    answer4: "red",
-    answer: "answer1",
-    correctAnswer: "answer1",
-    correct: true,
-    score: 586,
-  },
-  {
-    questionNumber: 5,
-    question: "Wharsjrejjre ky?",
-    answer1: "Green",
-    answer2: "Blue",
-    answer3: "Yellow",
-    answer4: "red",
-    answer: "answer3",
+    question: "What types of foods should you limit in your diet?",
+    answer1: "Dairy",
+    answer2: "Omega-3 fatty acids",
+    answer3: "Processed foods",
+    answer4: "Carbohydrates",
     correctAnswer: "answer3",
-    correct: true,
-    score: 700,
+    answer: "answer2",
+    score: 590,
   },
   {
-    questionNumber: 6,
-    question: "What wr HEWHG sky?",
-    answer1: "meeeeee",
-    answer2: "Blue",
-    answer3: "Yellow",
-    answer4: "red",
+    question: "Which activity is not a moderate-intensity activity?",
+    answer1: "Walking",
+    answer2: "Running",
+    answer3: "Doubles tennis",
+    answer4: "Pushing a lawnmower",
+    correctAnswer: "answer2",
     answer: "answer2",
+    score: 2570,
+  },
+  {
+    question: "Which activity is not a vigorous-intensity activity?",
+    answer1: "Heavy gardening",
+    answer2: "Running",
+    answer3: "Aerobics",
+    answer4: "Singles tennis",
+    correctAnswer: "answer1",
+    answer: "answer2",
+    score: 3677,
+  },
+  {
+    question: "Which activity is not a muscle-strengthening activity?",
+    answer1: "Carrying heavy shopping bags",
+    answer2: "Heavy gardening",
+    answer3: "Yoga",
+    answer4: "Aerobics",
     correctAnswer: "answer4",
-    correct: false,
-    score: 0,
-  },
-  {
-    questionNumber: 7,
-    question: "WhaWE GEW  EWy?",
-    answer1: "woooooo",
-    answer2: "Blue",
-    answer3: "Yellow",
-    answer4: "red",
     answer: "answer3",
-    correctAnswer: "answer3",
-    correct: true,
-    score: 110,
+    score: 8200,
   },
   {
-    questionNumber: 8,
-    question: "WhaEWG EW  WE EWy?",
-    answer1: "hiiiiiiii",
-    answer2: "Blue",
-    answer3: "Yellow",
-    answer4: "red",
-    answer: "answer1",
+    question: "Which activity is not a light activity?",
+    answer1: "Getting up to make a cup of tea",
+    answer2: "Yoga",
+    answer3: "Moving around your home",
+    answer4: "Cleaning and dusting",
     correctAnswer: "answer2",
-    correct: false,
-    score: 0,
+    answer: "answer2",
+    score: 1076,
   },
   {
-    questionNumber: 9,
-    question: "What coWE GGE WEWERHWsky?",
-    answer1: "woooooo",
-    answer2: "Blue",
-    answer3: "Yellow",
-    answer4: "red",
+    question:
+      "What fraction of your food portion should include vegetables & salad?",
+    answer1: "1/3",
+    answer2: "1/4",
+    answer3: "1/2",
+    answer4: "2/5",
+    correctAnswer: "answer3",
     answer: "answer4",
-    correctAnswer: "answer4",
-    correct: true,
-    score: 76,
+    score: 3449,
   },
   {
-    questionNumber: 10,
-    question: "What AWGWQAWGQAWG he sky?",
-    answer1: "hiiiiiiii",
-    answer2: "Blue",
-    answer3: "Yellow",
-    answer4: "red",
-    answer: "answer1",
+    question:
+      "What fraction of your food portion should include good-quality protein?",
+    answer1: "1/4",
+    answer2: "1/2",
+    answer3: "2/3",
+    answer4: "3/5",
     correctAnswer: "answer1",
-    correct: true,
-    score: 675,
+    answer: "answer1",
+    score: 940,
+  },
+  {
+    question:
+      "What fraction of your food portion should include complex carbohydrates?",
+    answer1: "1/2",
+    answer2: "3/5",
+    answer3: "2/3",
+    answer4: "1/4",
+    correctAnswer: "answer4",
+    answer: "answer4",
+    score: 1869,
+  },
+  {
+    question: "What are the benefits of following our programme?",
+    answer1: "Improving your quality of life",
+    answer2: "Improving mental health",
+    answer3: "Prolonging your lifespan",
+    answer4: "All of the above",
+    correctAnswer: "answer1",
+    answer: "answer1",
+    score: 772,
+  },
+  {
+    question: "What are the benefits of following our programme?",
+    answer1: "Looking younger",
+    answer2: "Saving money",
+    answer3: "Boosting your energy levels",
+    answer4: "All of the above",
+    correctAnswer: "answer3",
+    answer: "answer2",
+    score: 1193,
   },
 ];
 
@@ -125,11 +108,11 @@ window.addEventListener("DOMContentLoaded", () => {
   const center = document.querySelector(".center");
 
   function displaySummaryItems(items) {
-    let summaryHTML = items.map((item) => {
+    let summaryHTML = items.map((item, index) => {
       return `<div class="summary-item">
         <div class="top-container">
           <div class="question-title">
-            <h3 class="question">${item.questionNumber}. ${item.question}</h3>
+            <h3 class="question">${index + 1}. ${item.question}</h3>
           </div>
           <div class="score">
             <h3>Score: ${item.score}</h3>
@@ -150,7 +133,7 @@ window.addEventListener("DOMContentLoaded", () => {
   function addCorrectBorder(items) {
     const summaryItems = document.querySelectorAll(".summary-item");
     for (let i = 0; i < items.length; i++) {
-      if (items[i].correct) {
+      if (items[i].correctAnswer == items[i].answer) {
         summaryItems[i].classList.add("outline-color-green");
       } else {
         summaryItems[i].classList.add("outline-color-red");
@@ -189,9 +172,9 @@ window.addEventListener("DOMContentLoaded", () => {
     totalScoreHTML.innerHTML = `Total Score: ${totalScore}`;
   }
 
-  displaySummaryItems(quizQuestions);
-  addCorrectBorder(quizQuestions);
-  addCorrectAnswer(quizQuestions);
-  addYourAnswer(quizQuestions);
-  displayTotalScore(quizQuestions);
+  displaySummaryItems(answerObjArray);
+  addCorrectBorder(answerObjArray);
+  addCorrectAnswer(answerObjArray);
+  addYourAnswer(answerObjArray);
+  displayTotalScore(answerObjArray);
 });
