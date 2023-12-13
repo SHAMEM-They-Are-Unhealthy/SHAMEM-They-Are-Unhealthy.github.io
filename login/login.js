@@ -1,3 +1,5 @@
+const getCookieValue = (name) => (document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '');
+
 $(document).ready(function(){
     document.getElementsByClassName('sign-up')[0].setAttribute('href', '/register/' + window.location.search);
     if (getCookieValue("session-id") != null) {
