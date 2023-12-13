@@ -1,4 +1,4 @@
-import"./NavBar-fI6Nk3Gk.js";const d=a=>{var c;return((c=document.cookie.match("(^|;)\\s*"+a+"\\s*=\\s*([^;]+)"))==null?void 0:c.pop())||""};window.addEventListener("DOMContentLoaded",()=>{d("session-id")!=null?$.get("https://shamem.glitch.me/login_test",{sessionID:d("session-id")}).done(function(a,c){document.cookie="session-id="+a+"; path=/";const l=document.querySelector(".center");let i,r,e=-1,m,h,p;function y(){l.innerHTML=`
+import"./NavBar-PgYyMm5z.js";const d=a=>{var c;return((c=document.cookie.match("(^|;)\\s*"+a+"\\s*=\\s*([^;]+)"))==null?void 0:c.pop())||""};window.addEventListener("DOMContentLoaded",()=>{d("session-id")!=null?$.get("https://shamem.glitch.me/login_test",{sessionID:d("session-id")}).done(function(a,c){document.cookie="session-id="+a+"; path=/";const l=document.querySelector(".center");let i,r,e=-1,m,h,p;function y(){l.innerHTML=`
                 <div class="ready-container">
                     <h1 class="ready-title">
                         There are 10 questions in this quiz.

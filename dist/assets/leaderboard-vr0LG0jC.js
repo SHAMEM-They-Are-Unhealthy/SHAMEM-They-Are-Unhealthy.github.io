@@ -1,4 +1,4 @@
-import"./NavBar-fI6Nk3Gk.js";function c(e,s){return s.topScore-e.topScore}const r=document.querySelector(".center");$(document).ready(function(){$.get("https://shamem.glitch.me/get_highscores").done(function(e,s){var a=JSON.parse(e);let t=a.sort(c);o(t),d()})});function o(e){let s=e.map((a,t)=>`<article class="item">
+import"./NavBar-PgYyMm5z.js";function c(e,s){return s.topScore-e.topScore}const r=document.querySelector(".center");$(document).ready(function(){$.get("https://shamem.glitch.me/get_highscores").done(function(e,s){var a=JSON.parse(e);let t=a.sort(c);o(t),d()})});function o(e){let s=e.map((a,t)=>`<article class="item">
                 <h3 class="rank">${t+1}</h3>
                 <h3 class="username">${a.username}</h3>
                 <h3 class="score">${a.topScore}</h3>
