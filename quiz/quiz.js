@@ -8,8 +8,6 @@ $(document).ready(function() {
 <div class="a-container" style="text-align: center;">
     <a class="btn" href="/quiz/health-quiz/">Start the Quiz</a>
 </div>`;
-        }).fail(function(data, status) {
-            window.location = "/login/";
         });
     } else {
         window.location = "/login/";

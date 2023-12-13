@@ -17,10 +17,10 @@ $(document).ready(function() {
                 console.log("Create new plan");
             });
         }).fail(function(data, status) {
-            window.location = "/login/";
+            window.location = "/login/?tracker=true";
         });
     } else {
-        window.location = "/login/";
+        window.location = "/login/?tracker=true";
     }
     $("#start").click(function() {
         var current = $("#current").val();
@@ -28,7 +28,7 @@ $(document).ready(function() {
             document.cookie = "session-id=" + data + "; path=/";
             window.location = "/tracker/details/";
         }).fail(function(data, status) {
-            window.location = "/login/";
+            window.location = "/login/?tracker=true";
         });
         return false;
     });

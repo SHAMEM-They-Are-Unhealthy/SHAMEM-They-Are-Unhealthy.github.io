@@ -68,4 +68,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     document.querySelector('#submit').addEventListener('click', () => window.location = `results/?weight=${document.getElementById('weight').value}&height=${document.getElementById('height').value}&exercise=${document.getElementById('exercise').value}&alcohol=${document.getElementById('alcohol').value}&opioid=${document.getElementById('opioid').checked}&sleeping=${document.getElementById('sleeping').checked}&smoking=${document.getElementById('selected').value}`);
+    document.querySelector('#disclaimer').addEventListener('click', () => {
+        document.getElementById("overlay").style.visibility = "visible";
+        document.getElementById("overlay").style.opacity = 1;
+        document.getElementsByTagName("body")[0].style.overflow = "hidden";
+    });
+    document.getElementById("overlay").addEventListener('click', () => {
+        document.getElementById("overlay").style.opacity = 0;
+        document.getElementsByTagName("body")[0].style.overflow = "auto";
+        setTimeout(function() {document.getElementById("overlay").style.visibility = "hidden";}, 200);
+    });
 });

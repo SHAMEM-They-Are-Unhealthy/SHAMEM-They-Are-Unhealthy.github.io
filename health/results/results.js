@@ -341,6 +341,17 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
+        document.querySelector('#disclaimer').addEventListener('click', () => {
+            document.getElementById("overlay").style.visibility = "visible";
+            document.getElementById("overlay").style.opacity = 1;
+            document.getElementsByTagName("body")[0].style.overflow = "hidden";
+        });
+        document.getElementById("overlay").addEventListener('click', () => {
+            document.getElementById("overlay").style.opacity = 0;
+            document.getElementsByTagName("body")[0].style.overflow = "auto";
+            setTimeout(function() {document.getElementById("overlay").style.visibility = "hidden";}, 200);
+        });
+
         preloadImages(["https://emoji.aranja.com/static/emoji-data/img-apple-160/1f476.png", "https://emoji.aranja.com/static/emoji-data/img-apple-160/1f600.png", "https://emoji.aranja.com/static/emoji-data/img-apple-160/1f614.png", "https://emoji.aranja.com/static/emoji-data/img-apple-160/1f622.png", "https://emoji.aranja.com/static/emoji-data/img-apple-160/1f62e.png", "https://emoji.aranja.com/static/emoji-data/img-apple-160/1f635.png", "https://emoji.aranja.com/static/emoji-data/img-apple-160/2620-fe0f.png"]);
     } catch (err) {
         document.getElementById("error").style.display = "block";

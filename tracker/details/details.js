@@ -73,9 +73,9 @@ $(document).ready(function() {
             });
         }).fail(function(data, status) {
             console.log(data);
-            window.location = "/login/";
+            window.location = "/login/?tracker=true";
         });
     } else {
-        window.location = "/login/";
+        window.location = "/login/?tracker=true";
     }
 });
