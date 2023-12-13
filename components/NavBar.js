@@ -45,7 +45,7 @@ class NavBar extends HTMLElement {
                         <a href="/workout/" class="nav-link" style="font-weight: 400;">Workouts</a>
                     </li>
                     <li>
-                        <a href="/workout-tracker/" class="nav-link" style="font-weight: 400;">Workout Tracker</a>
+                        <a href="/tracker/" class="nav-link" style="font-weight: 400;">Workout Tracker</a>
                     </li>
                 </ul>
             </li>

@@ -27,7 +27,7 @@ class Index {
 const index1 = new Index(
   1,
   "Light Activity",
-  "photos/light.jpg",
+  "https://github.com/SHAMEM-They-Are-Unhealthy/SHAMEM-They-Are-Unhealthy.github.io/blob/main/workout/photos/light.jpg?raw=true",
   "Elderly couple walking on a path",
   "Light activity is moving rather than sitting or lying down",
   "Examples of light activity include:",
@@ -39,7 +39,7 @@ const index1 = new Index(
 const index2 = new Index(
   2,
   "Moderate intensity acitvity",
-  "photos/moderate.jpg",
+  "https://github.com/SHAMEM-They-Are-Unhealthy/SHAMEM-They-Are-Unhealthy.github.io/blob/main/workout/photos/moderate.jpg?raw=true",
   "Dance for fitness class",
   "Moderate intensity activity will raise raise your heart rate, make you breathe faster and feel warmer. You should be able to talk, but not sing",
   "Examples of moderate activity include:",
@@ -51,7 +51,7 @@ const index2 = new Index(
 const index3 = new Index(
   3,
   "Vigorous intensity activity",
-  "photos/vigorous.jpg",
+  "https://github.com/SHAMEM-They-Are-Unhealthy/SHAMEM-They-Are-Unhealthy.github.io/blob/main/workout/photos/vigorous.jpg?raw=true",
   "Couple jogging",
   "Vigorous activity makes you breathe fast. In general, every 75 minutes of vigorous activity has similar benefits to 150 minutes of moderate activity",
   "Examples of vigorous activities include:",
@@ -63,7 +63,7 @@ const index3 = new Index(
 const index4 = new Index(
   4,
   "Muscle Strengthening Activity",
-  "photos/muscle.jpg",
+  "https://github.com/SHAMEM-They-Are-Unhealthy/SHAMEM-They-Are-Unhealthy.github.io/blob/main/workout/photos/muscle.jpg?raw=true",
   "Two people swingning kettlebells",
   "Strengthing muscles can be done at home or in the gym, you should do them to the point where you need a short rest before repeating the activity",
   "Examples of Muscle-strengthening activities include:",
@@ -78,8 +78,6 @@ index.push(index1);
 index.push(index2);
 index.push(index3);
 index.push(index4);
-
-console.log(index.length);
 
 const sectionCenter = document.querySelector("#section-center");
 function loadContent() {
@@ -104,7 +102,6 @@ function loadContent() {
         `;
   });
   displayItem = displayItem.join("");
-  console.log(displayItem);
   sectionCenter.innerHTML = displayItem;
 }
 
