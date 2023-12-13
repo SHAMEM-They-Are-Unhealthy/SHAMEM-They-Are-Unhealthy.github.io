@@ -1,10 +1,10 @@
 const getCookieValue = (name) => (document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '');
 
+const center = document.querySelector(".center");
+
 function compareNumbers(u1, u2) {
     return u2.topScore - u1.topScore;
 }
-
-const center = document.querySelector(".center");
 
 $(document).ready(function() {
     $.get("https://shamem.glitch.me/get_highscores").done(function(data, status) {
