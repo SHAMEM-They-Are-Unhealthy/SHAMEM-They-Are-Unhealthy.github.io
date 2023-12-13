@@ -20,6 +20,7 @@
   border-radius: 2rem;
   padding: 2vw 3vw;
   font-size: calc(1vw + 1vh);
+  background-color: white;
 }
 
 .left {
@@ -46,4 +47,7 @@
 
 .right p {
   margin-bottom: 1vw;
+}
+
+@media screen and (max-width: 1400px) {
 }

@@ -23,6 +23,7 @@
   padding: 1vw 1.5vw;
   font-size: calc(1vw + 1.5vh);
   flex: 1 0 25%;
+  background-color: white;
 }
 
 .info-container img {
