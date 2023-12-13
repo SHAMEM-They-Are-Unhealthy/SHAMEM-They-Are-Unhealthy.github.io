@@ -73,9 +73,9 @@ $(document).ready(function() {
             });
         }).fail(function(data, status) {
             console.log(data);
-            window.location = "/quiz/login/";
+            window.location = "/login/";
         });
     } else {
-        window.location = "/quiz/login/";
+        window.location = "/login/";
     }
 });

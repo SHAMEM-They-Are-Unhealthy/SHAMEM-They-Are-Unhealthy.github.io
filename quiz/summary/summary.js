@@ -85,10 +85,10 @@ $(document).ready(function() {
                 window.location = "/quiz/";
             });
         }).fail(function(data, status) {
-            window.location = "/quiz/login/";
+            window.location = "/login/";
         });
     } else {
-        window.location = "/quiz/login/";
+        window.location = "/login/";
     }
 });
 

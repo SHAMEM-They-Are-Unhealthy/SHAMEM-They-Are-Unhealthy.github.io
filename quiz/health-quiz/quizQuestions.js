@@ -83,7 +83,7 @@ window.addEventListener("DOMContentLoaded", () => {
                         answerObjArray = [...quizQuestions];
                         displayNextQuestion();
                     }).fail(function(data, status) {
-                        window.location = "/quiz/login/";
+                        window.location = "/login/";
                     });
                 } else {
                     let questionHTML = `<div class="header-container">
@@ -133,7 +133,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                     setTimeout(displayResults, 3000);
                                 }
                             }).fail(function(data, status) {
-                                window.location = "/quiz/login/";
+                                window.location = "/login/";
                             });
                         });
                     });
@@ -145,9 +145,9 @@ window.addEventListener("DOMContentLoaded", () => {
                 window.location = "/quiz/summary/";
             }
         }).fail(function(data, status) {
-                window.location = "/quiz/login/";
+                window.location = "/login/";
         });
     } else {
-        window.location = "/quiz/login/";
+        window.location = "/login/";
     }
 });

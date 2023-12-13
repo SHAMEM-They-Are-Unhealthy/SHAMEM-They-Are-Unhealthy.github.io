@@ -9,9 +9,9 @@ $(document).ready(function() {
     <a class="btn" href="/quiz/health-quiz/">Start the Quiz</a>
 </div>`;
         }).fail(function(data, status) {
-            window.location = "/quiz/login/";
+            window.location = "/login/";
         });
     } else {
-        window.location = "/quiz/login/";
+        window.location = "/login/";
     }
 });
