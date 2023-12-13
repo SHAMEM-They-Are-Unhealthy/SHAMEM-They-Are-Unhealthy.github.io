@@ -1,86 +1,55 @@
-.info-container {
-    background-color: #c4c4c4;
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin-top: 2rem;
-    padding: 1rem;
-    border-radius: 8px;
+.title {
+  font-size: calc(1vw + 1vh);
+  margin: 3vw;
 }
 
-.bottom {
-    padding-top: 1rem;
-    display: flex;
-    flex-direction: row;
-}
-
-.bottom img {
-    object-fit: cover;
-    width: 250px;
-    height: 250px;
-    border-radius: 8px;
-}
-
-.bottom p {
-    margin-top: 1rem;
-    margin-left: 1rem;
-    width: 150px;
-    font-size: 1.4rem;
-}
-
-.info-container h2 {
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-.health-p {
-    font-size: 2rem;
-    padding: 0 3rem;
+.title p {
+  margin-top: 2vw;
 }
 
 .div-center {
-    place-items: center;
-    gap: 3rem 3rem;
-    padding-top: 2rem;
-    padding-bottom: 4rem;
-    justify-content: center;
-    display: grid;
-    grid-template: auto / auto auto auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 2vw;
 }
 
-.title {
-    text-align: center;
-    padding-top: 3rem;
-    padding: 5rem 2rem;
+.info-container {
+  margin: calc(0.4vw + 0.4vh);
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  border-radius: 2rem;
+  padding: 1vw 1.5vw;
+  font-size: calc(1vw + 1vh);
+  flex: 1 0 25%;
 }
 
-.title h1 {
-    font-size: 5rem;
-    font-weight: 900;
-    padding-bottom: 2rem;
+.info-container img {
+  width: 60%;
+  align-items: center;
+  border-radius: 2rem;
+  border: 0.4vw solid black;
 }
 
-@media screen and (max-width: 1400px){
-    .div-center {
-        grid-template: auto / auto auto ;
-    }
+.bottom {
+  margin-top: 1vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
-@media screen and (max-width: 900px){
-    .div-center {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .info-container {
-        max-width: 400px;
-        min-width: 325px;
-    }
-    .bottom p {
-        max-width:125px;
-    }
-    .bottom img {
-        width: 200px;
-        height: 200px;
-    }
+.bottom p {
+  margin: calc(1.5vw + 1.5vh) calc(1vw + 1vh);
+}
+
+@media screen and (max-width: 1000px) {
+  .info-container {
+    flex: 1 0 45%;
+  }
+  .nine {
+    max-width: 49%;
+  }
 }
