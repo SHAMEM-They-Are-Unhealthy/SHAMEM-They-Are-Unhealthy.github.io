@@ -1,5 +1,5 @@
 .title {
-  font-size: calc(1vw + 1vh);
+  font-size: calc(1vw + 1.5vh);
   margin: 3vw;
 }
 
@@ -21,11 +21,12 @@
     rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
   border-radius: 2rem;
   padding: 1vw 1.5vw;
-  font-size: calc(1vw + 1vh);
+  font-size: calc(1vw + 1.5vh);
   flex: 1 0 25%;
 }
 
 .info-container img {
+  margin-top: calc(1vw + 1vh);
   width: 60%;
   align-items: center;
   border-radius: 2rem;
@@ -51,5 +52,14 @@
   }
   .nine {
     max-width: 49%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .info-container {
+    flex: 1 0 100%;
+  }
+  .nine {
+    max-width: 100%;
   }
 }
