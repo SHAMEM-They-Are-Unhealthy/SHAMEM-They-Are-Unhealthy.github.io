@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://kit.fontawesome.com/9fcbeb9d9c.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+        <script src="/components/NavBar.js" type="module"></script>
+        <script src="details.js" type="module"></script>
+        <link rel="stylesheet" href="details.css"/>
+        <title>SHAMEM</title>
+    </head>
+    <body>
+        <nav-bar></nav-bar>
+        <main style="overflow-x: hidden;">
+            <section>
+                <h1>Your Plan</h1>
+                <h2 id="startDate"></h2>
+                <h2 id="endDate"></h2>
+                <h2 id="today"></h2>
+                <h2 id="tomorrow"></h2>
+            </section>
+            <section>
+                <div class="chart">
+                    <canvas id="day-chart"></canvas>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

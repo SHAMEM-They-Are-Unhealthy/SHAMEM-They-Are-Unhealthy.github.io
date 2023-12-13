@@ -5,12 +5,11 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/components/NavBar.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/9fcbeb9d9c.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="quiz.js" type="module"></script>
     <title>SHAMEM</title>
-    <link rel="stylesheet" href="/quiz/quiz-home.css" />
-    <script
-      src="https://kit.fontawesome.com/9fcbeb9d9c.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="quiz-home.css" />
   </head>
   <body>
     <nav-bar></nav-bar>
@@ -43,7 +42,7 @@
         <div class="left quiz-img-container">
           <img src="/quiz/quiz.jpg" alt="" />
         </div>
-        <div class="left login-container">
+        <div class="left login-container" id="login">
           <h3>To complete this quiz you will need to have an account</h3>
           <div class="a-container">
             <a class="btn" href="/quiz/login/">Log in</a>

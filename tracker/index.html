@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://kit.fontawesome.com/9fcbeb9d9c.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="/components/NavBar.js" type="module"></script>
+        <script src="/components/range.js" type="module"></script>
+        <script src="tracker.js" type="module"></script>
+        <link rel="stylesheet" href="tracker.css"/>
+        <link rel="stylesheet" href="/components/radioButton.css"/>
+        <title>SHAMEM</title>
+    </head>
+    <body>
+        <nav-bar></nav-bar>
+        <main>
+            <section>
+                <h1>Activity is the best way to increase your life expectancy</h1>
+                <h2>Use the following Activity Planner to build up to the amount of exercise that you want to do</h2>
+            </section>
+            <hr/>
+            <section>
+                <h2>Current steps per day average</h2>
+                <range-bar number="y" vid="current" other-id="" min="1" max="100" value="20" prefix="" suffix="00 steps"></range-bar>
+                <h2>How long is the plan</h2>
+                <range-bar number="y" vid="length" other-id="" min="15" max="52" value="15" prefix="" suffix=" weeks"></range-bar>
+                <div>
+                    <h2>Where do you want to be at the end?</h2>
+                    <div style="width: fit-content; margin: 0 auto;">
+                        <label class="container">Low Active
+                            <input type="radio" name="radio" value="LowActive">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Active (60+)
+                            <input type="radio" checked="checked" name="radio" value="OldActive">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Active
+                            <input type="radio" name="radio" value="Active">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Very Active
+                            <input type="radio" name="radio" value="HighlyActive">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <button id="start" style="margin: 20px auto;">Start plan now!</button>
+            </section>
+            <hr/>
+            <section class="watches">
+                <h2>Here you will find links to various smartwatches that can track your steps</h2>
+                <button onclick="window.open('https://www.garmin.com/en-GB/c/wearables-smartwatches/', '_blank')">Garmin watch</button>
+                <button onclick="window.open('https://www.fitbit.com/global/uk/products/smartwatches', '_blank')">Fitbit watch</button>
+                <button onclick="window.open('https://www.samsung.com/uk/watches/all-watches/', '_blank')">Samsung watch</button>
+                <button onclick="window.open('https://www.apple.com/uk/shop/buy-watch', '_blank')">Apple watch</button>
+            </section>
+        </main>
+    </body>
+</html>
