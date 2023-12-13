@@ -24,6 +24,15 @@
   border-radius: 5px;
 }
 
+.submit-btn:hover {
+  background-color: #ddd;
+}
+
+.submit-btn:active {
+  background-color: #444;
+  color: white;
+}
+
 .field input {
   padding: 0.5rem;
 }
