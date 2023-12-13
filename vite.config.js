@@ -16,7 +16,7 @@ export default {
                 register: resolve(__dirname, 'register/index.html'),
                 quiz: resolve(__dirname, 'quiz/index.html'),
                 health_quiz: resolve(__dirname, 'quiz/health-quiz/index.html'),
-                leaderboard: resolve(__dirname, 'quiz/leaderBoard/index.html'),
+                leaderboard: resolve(__dirname, 'quiz/leaderboard/index.html'),
                 summary: resolve(__dirname, 'quiz/summary/index.html'),
                 tracker: resolve(__dirname, 'tracker/index.html'),
                 details: resolve(__dirname, 'tracker/details/index.html'),
