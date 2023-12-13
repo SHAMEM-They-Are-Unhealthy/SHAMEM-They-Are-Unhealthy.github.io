@@ -20,7 +20,7 @@ $(document).ready(function() {
     let captcha_uuid;
     $.get("https://shamem.glitch.me/gen_captcha", function(data, status){
         captcha_uuid = data["uuid"]
-        document.getElementById("captchaImg").innerHTML = `<img src="data:image/jpeg;base64,${data["number"]}"/>`;
+        document.getElementById("captchaImg").innerHTML = `<img src="data:image/jpeg;base64,${data["number"]}" />`;
     });
 
     $("form").submit(function() {

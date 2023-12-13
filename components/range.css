@@ -35,17 +35,17 @@
 }
   
 .range::-webkit-slider-thumb:hover {
-    box-shadow: 0 0 0 10px rgba(255,85,0, .1), inset 0 0 0 5px rgba(255,85,0, .1)
+    box-shadow: 0 0 0 10px rgba(255, 85, 0, .1), inset 0 0 0 5px rgba(255, 85, 0, .1)
 }
 .range:active::-webkit-slider-thumb {
-    box-shadow: 0 0 0 13px rgba(255,85,0, .2), inset 0 0 0 5px rgba(255,85,0, .2)
+    box-shadow: 0 0 0 13px rgba(255, 85, 0, .2), inset 0 0 0 5px rgba(255, 85, 0, .2)
 }
   
 .range::-moz-range-thumb:hover {
-    box-shadow: 0 0 0 10px rgba(255,85,0, .1), inset 0 0 0 5px rgba(255,85,0, .1)
+    box-shadow: 0 0 0 10px rgba(255, 85, 0, .1), inset 0 0 0 5px rgba(255, 85, 0, .1)
 }
 .range:active::-moz-range-thumb {
-    box-shadow: 0 0 0 13px rgba(255,85,0, .2), inset 0 0 0 5px rgba(255,85,0, .2)
+    box-shadow: 0 0 0 13px rgba(255, 85, 0, .2), inset 0 0 0 5px rgba(255, 85, 0, .2)
 }
   
 h1 {

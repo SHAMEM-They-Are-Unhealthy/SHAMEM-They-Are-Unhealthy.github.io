@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="/components/NavBar.js" type="module"></script>
-    <script src="https://kit.fontawesome.com/9fcbeb9d9c.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="quiz.js" type="module"></script>
-    <title>SHAMEM</title>
-    <link rel="stylesheet" href="quiz-home.css" />
-  </head>
-  <body>
-    <nav-bar></nav-bar>
-    <div class="center">
-      <div class="quiz-home-title">
-        <h1>Quiz</h1>
-      </div>
-      <div class="top">
-        <div class="how-quiz-works">
-          <h2>How does the quiz work?</h2>
-          <ul>
-            <li>
-              These questions are designed to test your knowledge on our health
-              guidance.
-            </li>
-            <li>All questions are multiple choice.</li>
-            <li>
-              You will be scored based on if you chose correct answer and the
-              time taken to select it.
-            </li>
-            <li>
-              At the end of the quiz, there is a summary page to give you
-              feedback on your results.
-            </li>
-            <li>There is a quiz leaderboard.</li>
-          </ul>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://kit.fontawesome.com/9fcbeb9d9c.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="/components/NavBar.js" type="module"></script>
+        <script src="quiz.js" type="module"></script>
+        <link rel="stylesheet" href="quiz.css" />
+        <title>SHAMEM</title>
+    </head>
+    <body>
+        <nav-bar></nav-bar>
+        <div class="center">
+            <div class="quiz-home-title">
+                <h1>Quiz</h1>
+            </div>
+            <div class="top">
+                <div class="how-quiz-works">
+                    <h2>How does the quiz work?</h2>
+                    <ul>
+                        <li>
+                            These questions are designed to test your knowledge on our health
+                            guidance.
+                        </li>
+                        <li>All questions are multiple choice.</li>
+                        <li>
+                            You will be scored based on if you chose correct answer and the
+                            time taken to select it.
+                        </li>
+                        <li>
+                            At the end of the quiz, there is a summary page to give you
+                            feedback on your results.
+                        </li>
+                        <li>There is a quiz leaderboard.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="left quiz-img-container">
+                    <img src="/quiz/quiz.jpg" alt="" />
+                </div>
+                <div class="left login-container" id="login">
+                    <h3>To complete this quiz you will need to have an account</h3>
+                    <div class="a-container">
+                        <a class="btn" href="/login/">Log in</a>
+                    </div>
+                    <div class="a-container">
+                        <a class="btn" href="/register/">Register</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="bottom">
-        <div class="left quiz-img-container">
-          <img src="/quiz/quiz.jpg" alt="" />
-        </div>
-        <div class="left login-container" id="login">
-          <h3>To complete this quiz you will need to have an account</h3>
-          <div class="a-container">
-            <a class="btn" href="/login/">Log in</a>
-          </div>
-          <div class="a-container">
-            <a class="btn" href="/register/">Register</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>

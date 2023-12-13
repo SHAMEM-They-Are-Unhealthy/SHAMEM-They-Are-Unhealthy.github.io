@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("http://fonts.googleapis.com/css?family=Roboto");
+
+.center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+.submit-btn {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submit-btn:hover {
+    background-color: #ddd;
+}
+
+.submit-btn:active {
+    background-color: #444;
+    color: white;
+}
+
+.field input {
+    padding: 0.5rem;
+}
+
+.field label {
+    margin-bottom: 0.5rem;
+}
+
+.login-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.head-text h1 {
+    font-size: 3rem;
+    text-align: left;
+}
+
+.head-p {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    display: flex;
+}
+
+.head-p p {
+    margin-right: 0.7rem;
+}
+
+.head-p a {
+    text-decoration: underline;
+}
+
+.field label {
+    font-size: 2rem;
+}
+
+.login-container {
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 20px;
+}
+
+.form-control {
+    width: 100%;
+}

@@ -1,67 +1,69 @@
 .leaderboard-title {
-  margin-top: 2rem;
-  font-size: calc(1vw + 5vh + 2vmin);
+    margin-top: 2rem;
+    font-size: calc(1vw + 5vh + 2vmin);
 }
 
 .center {
-  display: flex;
-  flex-direction: column;
-  margin: 1%;
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
 }
 
 .key {
-  margin: 3% auto 0;
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: calc(0.4vw + 0.3vh) calc(2vw + 2vh);
-  background-color: #ffffff;
-  border-radius: 10px;
-  font-size: calc(1vw + 1vh + 1vmin);
+    margin: 3% auto 0;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc(0.4vw + 0.3vh) calc(2vw + 2vh);
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-size: calc(1vw + 1vh + 1vmin);
 }
 
 .item {
-  width: 80%;
-  margin: 1% auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: calc(0.4vw + 0.3vh) calc(2vw + 2vh);
-  background-color: #ffffff;
-  border-radius: 10px;
-  font-size: calc(1vw + 2vh + 1vmin);
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
-    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    width: 80%;
+    margin: 1% auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc(0.4vw + 0.3vh) calc(2vw + 2vh);
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-size: calc(1vw + 2vh + 1vmin);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+        rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
 .username {
-  font-size: calc(1.5vw + 1.5vh + 1vmin);
-  max-width: 60%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+    font-size: calc(1.5vw + 1.5vh + 1vmin);
+    max-width: 60%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .gold {
-  background-color: #ffd700;
+    background-color: #ffd700;
 }
+
 .silver {
-  background-color: #c0c0c0;
+    background-color: #c0c0c0;
 }
+
 .bronze {
-  background-color: #cd7f32;
+    background-color: #cd7f32;
 }
 
 @media all and (max-width: 780px) {
-  .item {
-    width: 95%;
-    margin: 1% auto;
-  }
-  .key {
-    width: 95%;
-    margin: 1% auto;
-  }
+    .item {
+        width: 95%;
+        margin: 1% auto;
+    }
+    .key {
+        width: 95%;
+        margin: 1% auto;
+    }
 }

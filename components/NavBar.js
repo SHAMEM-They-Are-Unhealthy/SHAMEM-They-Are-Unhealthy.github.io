@@ -1,12 +1,12 @@
 import "./nav.css";
 
 class NavBar extends HTMLElement {
-  constructor() {
-    super();
-  }
+    constructor() {
+        super();
+    }
 
-  connectedCallback() {
-    this.innerHTML = `
+    connectedCallback() {
+        this.innerHTML = `
 <header class="header">
     <nav class="navbar">
         <a href="/" class="nav-logo">
@@ -68,26 +68,26 @@ class NavBar extends HTMLElement {
     </nav>
 </header>
 <div style="height: 55px"></div>`;
-  }
+    }
 }
 
 customElements.define("nav-bar", NavBar);
 
 document.addEventListener("DOMContentLoaded", function () {
-  const hamburger = document.querySelector(".hamburger");
-  const navMenu = document.querySelector(".nav-menu");
-  const navLink = document.querySelectorAll(".nav-link");
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    const navLink = document.querySelectorAll(".nav-link");
 
-  hamburger.addEventListener("click", mobileMenu);
-  navLink.forEach((n) => n.addEventListener("click", closeMenu));
+    hamburger.addEventListener("click", mobileMenu);
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
 
-  function mobileMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-  }
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
 
-  function closeMenu() {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-  }
+    function closeMenu() {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }
 });

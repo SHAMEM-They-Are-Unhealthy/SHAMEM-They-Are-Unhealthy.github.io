@@ -91,7 +91,3 @@ $(document).ready(function() {
         window.location = "/login/";
     }
 });
-
-window.addEventListener("DOMContentLoaded", () => {
-    
-});
