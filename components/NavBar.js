@@ -35,10 +35,19 @@ class NavBar extends HTMLElement {
                     </li>
                 </ul>
             </li>
-            <li>
-                <a href="/workout/" class="nav-link">
-                    <p class="nav-item">Workout</p>
-                </a>
+            <li class="nav-item workout-info">
+                Workout Info
+                <span class="dropdown-icon">
+                    <i class="fa-solid fa-caret-down"></i>
+                </span>
+                <ul class="drop-down" style="text-align: left;">
+                    <li>
+                        <a href="/workout/" class="nav-link" style="font-weight: 400;">Workouts</a>
+                    </li>
+                    <li>
+                        <a href="/workout-tracker/" class="nav-link" style="font-weight: 400;">Workout Tracker</a>
+                    </li>
+                </ul>
             </li>
             <li>
                 <a href="/quiz/" class="nav-link">

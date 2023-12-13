@@ -136,7 +136,7 @@ h6 {
 }
 
 .nav-item {
-  margin-left: 10rem;
+  margin: 0 5rem;
   padding: 1rem 0;
   font-size: 1.6rem;
 }
@@ -163,6 +163,7 @@ h6 {
 }
 
 .drop-down {
+  color: var(--primary);
   position: absolute;
   background-color: #dbdbdb;
   color: black;
@@ -181,8 +182,12 @@ h6 {
   border-radius: 5px;
 }
 
-.drop-down a:hover {
+.workout-info {
   color: var(--primary);
+  font-weight: 600;
+}
+
+.drop-down a:hover {
   background-color: white;
 }
 
@@ -196,13 +201,18 @@ h6 {
   display: flex;
 }
 
-@media only screen and (max-width: 960px) {
+.workout-info:hover .drop-down {
+  display: flex;
+}
+
+@media only screen and (max-width: 1030px) {
   .nav-item {
-    margin-left: 0;
+    margin: 0;
   }
   .nav-menu {
-    width: 78%;
+    width: 84%;
     justify-content: space-between;
+    margin: 0 5rem;
   }
 }
 
@@ -223,6 +233,7 @@ h6 {
     transition: 0.1s;
     text-align: left;
     height: 100%;
+    margin: 0;
   }
 
   .nav-item {
@@ -252,6 +263,10 @@ h6 {
     background-color: rgb(231, 231, 231);
   }
 
+  .workout-info:hover .drop-down {
+    background-color: rgb(231, 231, 231);
+  }
+
   .dropdown-icon {
     display: none;
   }
@@ -271,6 +286,11 @@ h6 {
   }
 
   .health-info:hover {
+    background-color: rgb(231, 231, 231) !important;
+    cursor: default !important;
+  }
+
+  .workout-info:hover {
     background-color: rgb(231, 231, 231) !important;
     cursor: default !important;
   }
